@@ -5,9 +5,11 @@
  */
 package dnd;
 
+import Online.OnlineGui;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.net.ServerSocket;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.logging.Level;
@@ -209,6 +211,8 @@ public class Gui extends javax.swing.JFrame {
         jCheckBox17 = new javax.swing.JCheckBox();
         jButton14 = new javax.swing.JButton();
         jButton15 = new javax.swing.JButton();
+        jButton17 = new javax.swing.JButton();
+        jButton18 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -942,6 +946,11 @@ public class Gui extends javax.swing.JFrame {
         jLabel38.setText("XP - Level 1");
 
         jTextField14.setText("?");
+        jTextField14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField14ActionPerformed(evt);
+            }
+        });
 
         jLabel39.setText("Alignment");
 
@@ -1597,6 +1606,20 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        jButton17.setText("Connect");
+        jButton17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton17ActionPerformed(evt);
+            }
+        });
+
+        jButton18.setText("Host");
+        jButton18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton18ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -1606,13 +1629,17 @@ public class Gui extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
                                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jButton17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1656,7 +1683,11 @@ public class Gui extends javax.swing.JFrame {
                                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(36, 36, 36)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jButton17)
+                                    .addComponent(jButton18))
+                                .addGap(7, 7, 7)))
                         .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(12, 12, 12)))
                 .addContainerGap())
@@ -1666,6 +1697,7 @@ public class Gui extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     protected String acFormula = "+10+DEX";
+    public OnlineGui online = null;
 
     protected int parseACFormula(String text) {
         String adding;
@@ -1744,16 +1776,16 @@ public class Gui extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         String dice = jTextField16.getText();
         String[] fields = dice.split("d");
-        int max = Integer.parseInt(fields[0]);
-        int number = Integer.parseInt(fields[1]);
-        int val = getDice(max, number);
+        int diceQuantity = Integer.parseInt(fields[0]);
+        int diceValue = Integer.parseInt(fields[1]);
+        int val = getDice(diceQuantity, diceValue);
         if (jCheckBox1.isSelected()) {
-            int val2 = getDice(max, number);
+            int val2 = getDice(diceQuantity, diceValue);
             if (val2 > val) {
                 val = val2;
             }
         } else if (jCheckBox2.isSelected()) {
-            int val2 = getDice(max, number);
+            int val2 = getDice(diceQuantity, diceValue);
             if (val2 < val) {
                 val = val2;
             }
@@ -1762,6 +1794,16 @@ public class Gui extends javax.swing.JFrame {
         jCheckBox1.setSelected(false);
         jCheckBox2.setSelected(false);
         updateWisdom();
+        
+        if (online != null) {
+            if (val == 1) {
+                online.print(" rolled a " + jTextField16.getText() + " for " + val + ". CRITICAL FAIL");
+            } else if (val == diceValue) {
+                online.print(" rolled a " + jTextField16.getText() + " for " + val + ". CRITICAL SUCCESS");
+            } else {
+                online.print(" rolled a " + jTextField16.getText() + " for " + val);
+            }
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private int getDice(int howMany, int diceSize) {
@@ -1980,6 +2022,9 @@ public class Gui extends javax.swing.JFrame {
         Random rand = new Random();
         int numbah = Math.abs(rand.nextInt()) % 20 + 1 + Integer.parseInt(jLabel9.getText());
         jLabel15.setText(numbah + "");
+        if (online != null) {
+            online.print(" rolled INITIATIVE - " + numbah);
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
@@ -2288,6 +2333,9 @@ public class Gui extends javax.swing.JFrame {
         jLabel56.setText(mod + "");
         mod += getDice(1, 20);
         jLabel52.setText(mod + "");
+        if (online != null) {
+            online.print(" rolled ATTACK on " + jTextField7.getText() + " - " + mod);
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -2301,6 +2349,9 @@ public class Gui extends javax.swing.JFrame {
             mod += Integer.parseInt(fields[2]);
         }
         jLabel52.setText(mod + "");
+        if (online != null) {
+            online.print(" rolled DAMAGE on " + jTextField7.getText() + " - " + mod);
+        }
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -2313,6 +2364,9 @@ public class Gui extends javax.swing.JFrame {
         jLabel57.setText(mod + "");
         mod += getDice(1, 20);
         jLabel53.setText(mod + "");
+        if (online != null) {
+            online.print(" rolled ATTACK on " + jTextField18.getText() + " - " + mod);
+        }
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -2326,6 +2380,9 @@ public class Gui extends javax.swing.JFrame {
             mod += Integer.parseInt(fields[2]);
         }
         jLabel53.setText(mod + "");
+        if (online != null) {
+            online.print(" rolled DAMAGE on " + jTextField18.getText() + " - " + mod);
+        }
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
@@ -2338,6 +2395,9 @@ public class Gui extends javax.swing.JFrame {
         jLabel58.setText(mod + "");
         mod += getDice(1, 20);
         jLabel54.setText(mod + "");
+        if (online != null) {
+            online.print(" rolled ATTACK on " + jTextField22.getText() + " - " + mod);
+        }
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
@@ -2351,6 +2411,9 @@ public class Gui extends javax.swing.JFrame {
             mod += Integer.parseInt(fields[2]);
         }
         jLabel54.setText(mod + "");
+        if (online != null) {
+            online.print(" rolled DAMAGE on " + jTextField22.getText() + " - " + mod);
+        }
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
@@ -2363,6 +2426,9 @@ public class Gui extends javax.swing.JFrame {
         jLabel59.setText(mod + "");
         mod += getDice(1, 20);
         jLabel55.setText(mod + "");
+        if (online != null) {
+            online.print(" rolled ATTACK on " + jTextField26.getText() + " - " + mod);
+        }
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
@@ -2376,15 +2442,21 @@ public class Gui extends javax.swing.JFrame {
             mod += Integer.parseInt(fields[2]);
         }
         jLabel55.setText(mod + "");
+        if (online != null) {
+            online.print(" rolled DAMAGE on " + jTextField26.getText() + " - " + mod);
+        }
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jTextField30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField30ActionPerformed
         int diceN = Integer.parseInt(jTextField30.getText());
         int level = getCurrentLevel();
+        int constMod = Integer.parseInt(jLabel10.getText());
         if (level == 1) {
-            jLabel61.setText("/ " + (diceN + Integer.parseInt(jLabel10.getText())) + " HP");
+            // Base HP at lvl 1
+            jLabel61.setText("/ " + (diceN + constMod) + " HP");
         } else {
-            jLabel61.setText("/ " + (((diceN / 2) + 1 + Integer.parseInt(jLabel10.getText())) * level) + " HP");
+            // Base HP + (avg+con) per level
+            jLabel61.setText("/ " + (diceN + constMod + ((diceN / 2) + 1 + Integer.parseInt(jLabel10.getText())) * (level - 1)) + " HP");
         }
         jLabel60.setText(level + " Hit Dice Left");
     }//GEN-LAST:event_jTextField30ActionPerformed
@@ -2401,6 +2473,9 @@ public class Gui extends javax.swing.JFrame {
         if (currentDice > maxDice) {
             currentDice = maxDice;
         }
+        if (online != null) {
+            online.print(" has made a LONG REST. He now has " + currentDice + " Hit Dice Left");
+        }
         jLabel60.setText(currentDice + " Hit Dice Left");
         jButton12.setEnabled(true);
     }//GEN-LAST:event_jButton11ActionPerformed
@@ -2416,6 +2491,9 @@ public class Gui extends javax.swing.JFrame {
         }
         int diceLeft = Integer.parseInt(jLabel60.getText().split(" ")[0]);
         if (diceLeft > 0) {
+            if (online != null) {
+                online.print(" has made a SHORT REST. He now has " + currHP + "/" + maxHP + " HP");
+            }
             jTextField31.setText(currHP + "");
             jLabel60.setText((diceLeft - 1) + " Hit Dice Left");
         }
@@ -2430,10 +2508,16 @@ public class Gui extends javax.swing.JFrame {
             //stable
             int d = getDice(1, 4);
             jLabel63.setText(d + "h");
+            if (online != null) {
+                online.print(" is passed out for " + d + " hours");
+            }
         } else {
             //dying
             int d = getDice(1, 20);
             jLabel63.setText(String.format("%2d", d));
+            if (online != null) {
+                online.print(" rolled a DEATH SAVE - " + d);
+            }
             if (d >= 10) {
                 successDeathST();
                 if (d == 20) {
@@ -2490,7 +2574,7 @@ public class Gui extends javax.swing.JFrame {
             jCheckBox14.setSelected(false);
             jCheckBox15.setSelected(false);
             jCheckBox16.setSelected(false);
-            
+
             jCheckBox17.setEnabled(false);
             jCheckBox3.setEnabled(false);
             jCheckBox12.setEnabled(false);
@@ -2498,16 +2582,16 @@ public class Gui extends javax.swing.JFrame {
             jCheckBox14.setEnabled(false);
             jCheckBox15.setEnabled(false);
             jCheckBox16.setEnabled(false);
-            
+
             jCheckBox17ActionPerformed(null);
-            
+
             jButton12.setEnabled(true);
             jButton11.setEnabled(true);
         } else {
             jButton13.setEnabled(true);
             jButton12.setEnabled(false);
             jButton11.setEnabled(false);
-            
+
             jCheckBox17.setEnabled(true);
             jCheckBox3.setEnabled(true);
             jCheckBox12.setEnabled(true);
@@ -2519,6 +2603,99 @@ public class Gui extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField31ActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        if (jTextField1.getText().equals("")) {
+            jTextField1.setText(" ");
+        }
+        if (jTextField2.getText().equals("")) {
+            jTextField2.setText(" ");
+        }
+        if (jTextField3.getText().equals("")) {
+            jTextField3.setText(" ");
+        }
+        if (jTextField4.getText().equals("")) {
+            jTextField4.setText(" ");
+        }
+        if (jTextField5.getText().equals("")) {
+            jTextField5.setText(" ");
+        }
+        if (jTextField6.getText().equals("")) {
+            jTextField6.setText(" ");
+        }
+
+        if (jTextField10.getText().equals("")) {
+            jTextField10.setText(" ");
+        }
+        if (jTextField30.getText().equals("")) {
+            jTextField30.setText(" ");
+        }
+        if (jTextField31.getText().equals("")) {
+            jTextField31.setText(" ");
+        }
+
+        if (jTextField12.getText().equals("")) {
+            jTextField12.setText(" ");
+        }
+        if (jTextField13.getText().equals("")) {
+            jTextField13.setText(" ");
+        }
+        if (jTextField14.getText().equals("")) {
+            jTextField14.setText(" ");
+        }
+        if (jTextField15.getText().equals("")) {
+            jTextField15.setText(" ");
+        }
+
+        if (jTextField7.getText().equals("")) {
+            jTextField7.setText(" ");
+        }
+        if (jTextField9.getText().equals("")) {
+            jTextField9.setText(" ");
+        }
+        if (jTextField11.getText().equals("")) {
+            jTextField11.setText(" ");
+        }
+        if (jTextField17.getText().equals("")) {
+            jTextField17.setText(" ");
+        }
+
+        if (jTextField18.getText().equals("")) {
+            jTextField18.setText(" ");
+        }
+        if (jTextField19.getText().equals("")) {
+            jTextField19.setText(" ");
+        }
+        if (jTextField20.getText().equals("")) {
+            jTextField20.setText(" ");
+        }
+        if (jTextField11.getText().equals("")) {
+            jTextField21.setText(" ");
+        }
+
+        if (jTextField22.getText().equals("")) {
+            jTextField22.setText(" ");
+        }
+        if (jTextField23.getText().equals("")) {
+            jTextField23.setText(" ");
+        }
+        if (jTextField24.getText().equals("")) {
+            jTextField24.setText(" ");
+        }
+        if (jTextField25.getText().equals("")) {
+            jTextField25.setText(" ");
+        }
+
+        if (jTextField26.getText().equals("")) {
+            jTextField26.setText(" ");
+        }
+        if (jTextField27.getText().equals("")) {
+            jTextField27.setText(" ");
+        }
+        if (jTextField28.getText().equals("")) {
+            jTextField28.setText(" ");
+        }
+        if (jTextField29.getText().equals("")) {
+            jTextField29.setText(" ");
+        }
 
         JFileChooser saveFile = new JFileChooser();
         if (saveFile.showSaveDialog(null) == JFileChooser.APPROVE_OPTION) {
@@ -2802,12 +2979,43 @@ public class Gui extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton16ActionPerformed
 
     private void jCheckBox17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox17ActionPerformed
-        if(jCheckBox17.isSelected()){
+        if (jCheckBox17.isSelected()) {
             jButton13.setText("Hours AFK");
-        } else{
+        } else {
             jButton13.setText("Death Save");
         }
     }//GEN-LAST:event_jCheckBox17ActionPerformed
+
+    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
+        ServerSocket sock;
+        try {
+            sock = new ServerSocket(0);
+            //setVisible(false);
+            //dispose();
+            java.awt.EventQueue.invokeLater(new Runnable() {
+                public void run() {
+                    online = new OnlineGui(sock);
+                    online.setVisible(true);
+                }
+            });
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }//GEN-LAST:event_jButton18ActionPerformed
+
+    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+        javax.swing.JFrame l = this;
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                Connect dialog = new Connect(l, true, jTextField15.getText());
+                dialog.setVisible(true);
+            }
+        });
+    }//GEN-LAST:event_jButton17ActionPerformed
+
+    private void jTextField14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField14ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField14ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2842,6 +3050,7 @@ public class Gui extends javax.swing.JFrame {
                 new Gui().setVisible(true);
             }
         });
+
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -2853,6 +3062,8 @@ public class Gui extends javax.swing.JFrame {
     private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton17;
+    private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;

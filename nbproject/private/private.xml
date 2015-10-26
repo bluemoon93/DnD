@@ -3,7 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/BlueMoon/Documents/NetBeansProjects/DnD/src/dnd/Connect.java</file>
+            <file>file:/C:/Users/BlueMoon/Documents/NetBeansProjects/DnD/src/Online/ForwardThread.java</file>
+            <file>file:/C:/Users/BlueMoon/Documents/NetBeansProjects/DnD/src/Online/OnlineGui.java</file>
             <file>file:/C:/Users/BlueMoon/Documents/NetBeansProjects/DnD/src/dnd/Gui.java</file>
+            <file>file:/C:/Users/BlueMoon/Documents/NetBeansProjects/DnD/src/Online/GetThread.java</file>
+            <file>file:/C:/Users/BlueMoon/Documents/NetBeansProjects/DnD/src/Online/AcceptThread.java</file>
         </group>
     </open-files>
 </project-private>
