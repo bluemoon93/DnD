@@ -6,6 +6,7 @@
 package dnd;
 
 import Online.OnlineGui;
+import formula.Formula;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -43,20 +44,20 @@ public class Gui extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
+        strScore = new javax.swing.JTextField();
+        dexScore = new javax.swing.JTextField();
+        conScore = new javax.swing.JTextField();
+        intScore = new javax.swing.JTextField();
+        wisScore = new javax.swing.JTextField();
+        chaScore = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
+        strModifier = new javax.swing.JLabel();
+        dexModifier = new javax.swing.JLabel();
+        conModifier = new javax.swing.JLabel();
+        intModifier = new javax.swing.JLabel();
+        wisModifier = new javax.swing.JLabel();
+        chaModifier = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
@@ -65,24 +66,24 @@ public class Gui extends javax.swing.JFrame {
         jRadioButton5 = new javax.swing.JRadioButton();
         jRadioButton6 = new javax.swing.JRadioButton();
         jLabel13 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
+        strST = new javax.swing.JLabel();
+        dexST = new javax.swing.JLabel();
+        conST = new javax.swing.JLabel();
+        intST = new javax.swing.JLabel();
+        wisST = new javax.swing.JLabel();
+        chaST = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jLabel32 = new javax.swing.JLabel();
         jLabel33 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
+        speedScore = new javax.swing.JTextField();
         jLabel34 = new javax.swing.JLabel();
         jLabel35 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        profScore = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
-        jLabel15 = new javax.swing.JLabel();
+        initScore = new javax.swing.JLabel();
         jLabel49 = new javax.swing.JLabel();
-        jLabel50 = new javax.swing.JLabel();
-        jLabel62 = new javax.swing.JLabel();
+        passWisScore = new javax.swing.JLabel();
+        acScore = new javax.swing.JLabel();
         jButton16 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jRadioButton14 = new javax.swing.JRadioButton();
@@ -103,52 +104,52 @@ public class Gui extends javax.swing.JFrame {
         jRadioButton12 = new javax.swing.JRadioButton();
         jRadioButton25 = new javax.swing.JRadioButton();
         jRadioButton13 = new javax.swing.JRadioButton();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jLabel24 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
-        jLabel27 = new javax.swing.JLabel();
-        jLabel28 = new javax.swing.JLabel();
-        jLabel29 = new javax.swing.JLabel();
-        jLabel30 = new javax.swing.JLabel();
-        jLabel31 = new javax.swing.JLabel();
-        jLabel36 = new javax.swing.JLabel();
-        jLabel42 = new javax.swing.JLabel();
-        jLabel43 = new javax.swing.JLabel();
-        jLabel44 = new javax.swing.JLabel();
-        jLabel45 = new javax.swing.JLabel();
-        jLabel46 = new javax.swing.JLabel();
-        jLabel47 = new javax.swing.JLabel();
-        jLabel48 = new javax.swing.JLabel();
+        acrobaticsCheckMod = new javax.swing.JLabel();
+        animalCheckMod = new javax.swing.JLabel();
+        arcanaCheckMod = new javax.swing.JLabel();
+        athleticsCheckMod = new javax.swing.JLabel();
+        deceptionCheckMod = new javax.swing.JLabel();
+        historyCheckMod = new javax.swing.JLabel();
+        insightCheckMod = new javax.swing.JLabel();
+        intimidationCheckMod = new javax.swing.JLabel();
+        investigationCheckMod = new javax.swing.JLabel();
+        medicineCheckMod = new javax.swing.JLabel();
+        natureCheckMod = new javax.swing.JLabel();
+        perceptionCheckMod = new javax.swing.JLabel();
+        performanceCheckMod = new javax.swing.JLabel();
+        persuasionCheckMod = new javax.swing.JLabel();
+        religionCheckMod = new javax.swing.JLabel();
+        sleightHandCheckMod = new javax.swing.JLabel();
+        stealthCheckMod = new javax.swing.JLabel();
+        survivalCheckMod = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
-        jTextField12 = new javax.swing.JTextField();
+        raceClass = new javax.swing.JTextField();
         jLabel37 = new javax.swing.JLabel();
-        jTextField13 = new javax.swing.JTextField();
+        xpScore = new javax.swing.JTextField();
         jLabel38 = new javax.swing.JLabel();
-        jTextField14 = new javax.swing.JTextField();
+        alignment = new javax.swing.JTextField();
         jLabel39 = new javax.swing.JLabel();
-        jTextField15 = new javax.swing.JTextField();
+        charName = new javax.swing.JTextField();
         jLabel40 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
-        jTextField16 = new javax.swing.JTextField();
+        diceField = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jLabel41 = new javax.swing.JLabel();
         jCheckBox1 = new javax.swing.JCheckBox();
         jCheckBox2 = new javax.swing.JCheckBox();
         jPanel7 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        personality = new javax.swing.JTextArea();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
+        idealsBonds = new javax.swing.JTextArea();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTextArea3 = new javax.swing.JTextArea();
+        flaws = new javax.swing.JTextArea();
         jScrollPane4 = new javax.swing.JScrollPane();
-        jTextArea4 = new javax.swing.JTextArea();
+        equipsGold = new javax.swing.JTextArea();
         jScrollPane5 = new javax.swing.JScrollPane();
-        jTextArea5 = new javax.swing.JTextArea();
+        featuresTraits = new javax.swing.JTextArea();
         jScrollPane6 = new javax.swing.JScrollPane();
-        jTextArea6 = new javax.swing.JTextArea();
+        profsLanguages = new javax.swing.JTextArea();
         jPanel8 = new javax.swing.JPanel();
         jButton3 = new javax.swing.JButton();
         jLabel52 = new javax.swing.JLabel();
@@ -192,11 +193,11 @@ public class Gui extends javax.swing.JFrame {
         jLabel59 = new javax.swing.JLabel();
         jPanel9 = new javax.swing.JPanel();
         jButton11 = new javax.swing.JButton();
-        jTextField30 = new javax.swing.JTextField();
+        hitDiceNumber = new javax.swing.JTextField();
         jLabel51 = new javax.swing.JLabel();
         jLabel60 = new javax.swing.JLabel();
         jLabel61 = new javax.swing.JLabel();
-        jTextField31 = new javax.swing.JTextField();
+        currHpScore = new javax.swing.JTextField();
         jButton12 = new javax.swing.JButton();
         jButton13 = new javax.swing.JButton();
         jLabel63 = new javax.swing.JLabel();
@@ -227,45 +228,45 @@ public class Gui extends javax.swing.JFrame {
         jLabel6.setText("CHA");
         jLabel6.setToolTipText("");
 
-        jTextField1.setText("10");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        strScore.setText("10");
+        strScore.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                strScoreActionPerformed(evt);
             }
         });
 
-        jTextField2.setText("10");
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        dexScore.setText("10");
+        dexScore.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                dexScoreActionPerformed(evt);
             }
         });
 
-        jTextField3.setText("10");
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        conScore.setText("10");
+        conScore.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                conScoreActionPerformed(evt);
             }
         });
 
-        jTextField4.setText("10");
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        intScore.setText("10");
+        intScore.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                intScoreActionPerformed(evt);
             }
         });
 
-        jTextField5.setText("10");
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        wisScore.setText("10");
+        wisScore.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                wisScoreActionPerformed(evt);
             }
         });
 
-        jTextField6.setText("10");
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+        chaScore.setText("10");
+        chaScore.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+                chaScoreActionPerformed(evt);
             }
         });
 
@@ -273,17 +274,17 @@ public class Gui extends javax.swing.JFrame {
 
         jLabel2.setText("DEX");
 
-        jLabel8.setText("0");
+        strModifier.setText("0");
 
-        jLabel9.setText("0");
+        dexModifier.setText("0");
 
-        jLabel10.setText("0");
+        conModifier.setText("0");
 
-        jLabel11.setText("0");
+        intModifier.setText("0");
 
-        jLabel12.setText("0");
+        wisModifier.setText("0");
 
-        jLabel14.setText("0");
+        chaModifier.setText("0");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -292,38 +293,38 @@ public class Gui extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addComponent(strScore, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
+                    .addComponent(dexScore, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(conScore, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(intScore, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(wisScore, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(chaScore, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel8))
+                        .addComponent(strModifier))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel6)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel14))
+                        .addComponent(chaModifier))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel9))
+                        .addComponent(dexModifier))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                        .addComponent(jLabel10))
+                        .addComponent(conModifier))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel11))
+                        .addComponent(intModifier))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel12)))
+                        .addComponent(wisModifier)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -331,34 +332,34 @@ public class Gui extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(strScore, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1)
-                    .addComponent(jLabel8))
+                    .addComponent(strModifier))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dexScore, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2)
-                    .addComponent(jLabel9))
+                    .addComponent(dexModifier))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(conScore, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3)
-                    .addComponent(jLabel10))
+                    .addComponent(conModifier))
                 .addGap(6, 6, 6)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(intScore, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4)
-                    .addComponent(jLabel11))
+                    .addComponent(intModifier))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(wisScore, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5)
-                    .addComponent(jLabel12))
+                    .addComponent(wisModifier))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(chaScore, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6)
-                    .addComponent(jLabel14))
+                    .addComponent(chaModifier))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -408,17 +409,17 @@ public class Gui extends javax.swing.JFrame {
 
         jLabel13.setText("Saving Throws");
 
-        jLabel16.setText("0");
+        strST.setText("0");
 
-        jLabel17.setText("0");
+        dexST.setText("0");
 
-        jLabel18.setText("0");
+        conST.setText("0");
 
-        jLabel19.setText("0");
+        intST.setText("0");
 
-        jLabel20.setText("0");
+        wisST.setText("0");
 
-        jLabel21.setText("0");
+        chaST.setText("0");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -430,30 +431,30 @@ public class Gui extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jRadioButton1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel16))
+                        .addComponent(strST))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jRadioButton4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel19))
+                        .addComponent(intST))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jRadioButton2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel17))
+                        .addComponent(dexST))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jRadioButton5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel20))
+                        .addComponent(wisST))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jRadioButton6)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel21))
+                        .addComponent(chaST))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel13)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jRadioButton3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel18)))
+                        .addComponent(conST)))
                 .addGap(6, 6, 6))
         );
         jPanel2Layout.setVerticalGroup(
@@ -464,27 +465,27 @@ public class Gui extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButton1)
-                    .addComponent(jLabel16))
+                    .addComponent(strST))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButton2)
-                    .addComponent(jLabel17))
+                    .addComponent(dexST))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButton3)
-                    .addComponent(jLabel18))
+                    .addComponent(conST))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButton4)
-                    .addComponent(jLabel19))
+                    .addComponent(intST))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButton5)
-                    .addComponent(jLabel20))
+                    .addComponent(wisST))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButton6)
-                    .addComponent(jLabel21))
+                    .addComponent(chaST))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -496,7 +497,7 @@ public class Gui extends javax.swing.JFrame {
         jLabel33.setText("Armor Class");
         jLabel33.setToolTipText("");
 
-        jTextField10.setText("0");
+        speedScore.setText("0");
 
         jLabel34.setText("Initiative");
         jLabel34.setToolTipText("");
@@ -504,7 +505,7 @@ public class Gui extends javax.swing.JFrame {
         jLabel35.setText("Speed");
         jLabel35.setToolTipText("");
 
-        jLabel7.setText("+2");
+        profScore.setText("+2");
 
         jButton2.setText("Roll!");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -513,13 +514,13 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
-        jLabel15.setText("0");
+        initScore.setText("0");
 
         jLabel49.setText("Passive Wisdom");
 
-        jLabel50.setText("12");
+        passWisScore.setText("12");
 
-        jLabel62.setText("10");
+        acScore.setText("10");
 
         jButton16.setText("Set");
         jButton16.addActionListener(new java.awt.event.ActionListener() {
@@ -539,20 +540,20 @@ public class Gui extends javax.swing.JFrame {
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanel5Layout.createSequentialGroup()
                                 .addGap(59, 59, 59)
-                                .addComponent(jLabel7))
+                                .addComponent(profScore))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                                 .addComponent(jButton16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel62)))
+                                .addComponent(acScore)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel32)
                             .addComponent(jLabel33)))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel50, javax.swing.GroupLayout.Alignment.TRAILING))
+                            .addComponent(speedScore, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(initScore, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(passWisScore, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel5Layout.createSequentialGroup()
@@ -569,25 +570,25 @@ public class Gui extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel32)
-                    .addComponent(jLabel7))
+                    .addComponent(profScore))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel33)
-                    .addComponent(jLabel62)
+                    .addComponent(acScore)
                     .addComponent(jButton16))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel34)
                     .addComponent(jButton2)
-                    .addComponent(jLabel15))
+                    .addComponent(initScore))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(speedScore, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel35))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel49)
-                    .addComponent(jLabel50))
+                    .addComponent(passWisScore))
                 .addContainerGap())
         );
 
@@ -737,41 +738,41 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
-        jLabel22.setText("0");
+        acrobaticsCheckMod.setText("0");
 
-        jLabel23.setText("0");
+        animalCheckMod.setText("0");
 
-        jLabel24.setText("0");
+        arcanaCheckMod.setText("0");
 
-        jLabel25.setText("0");
+        athleticsCheckMod.setText("0");
 
-        jLabel26.setText("0");
+        deceptionCheckMod.setText("0");
 
-        jLabel27.setText("0");
+        historyCheckMod.setText("0");
 
-        jLabel28.setText("0");
+        insightCheckMod.setText("0");
 
-        jLabel29.setText("0");
+        intimidationCheckMod.setText("0");
 
-        jLabel30.setText("0");
+        investigationCheckMod.setText("0");
 
-        jLabel31.setText("0");
+        medicineCheckMod.setText("0");
 
-        jLabel36.setText("0");
+        natureCheckMod.setText("0");
 
-        jLabel42.setText("0");
+        perceptionCheckMod.setText("0");
 
-        jLabel43.setText("0");
+        performanceCheckMod.setText("0");
 
-        jLabel44.setText("0");
+        persuasionCheckMod.setText("0");
 
-        jLabel45.setText("0");
+        religionCheckMod.setText("0");
 
-        jLabel46.setText("0");
+        sleightHandCheckMod.setText("0");
 
-        jLabel47.setText("0");
+        stealthCheckMod.setText("0");
 
-        jLabel48.setText("0");
+        survivalCheckMod.setText("0");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -783,63 +784,63 @@ public class Gui extends javax.swing.JFrame {
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jRadioButton25)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
-                        .addComponent(jLabel23))
+                        .addComponent(animalCheckMod))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jRadioButton11)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel22))
+                        .addComponent(acrobaticsCheckMod))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jRadioButton10)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel24))
+                        .addComponent(arcanaCheckMod))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jRadioButton8)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel25))
+                        .addComponent(athleticsCheckMod))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jRadioButton12)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel26))
+                        .addComponent(deceptionCheckMod))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jRadioButton14)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel27))
+                        .addComponent(historyCheckMod))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jRadioButton24)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel48))
+                        .addComponent(survivalCheckMod))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jRadioButton17)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel31))
+                        .addComponent(medicineCheckMod))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jRadioButton9)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel36))
+                        .addComponent(natureCheckMod))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jRadioButton18)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel42))
+                        .addComponent(perceptionCheckMod))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jRadioButton19)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel43))
+                        .addComponent(performanceCheckMod))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jRadioButton20)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel44))
+                        .addComponent(persuasionCheckMod))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jRadioButton21)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel45))
+                        .addComponent(religionCheckMod))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jRadioButton22)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel46))
+                        .addComponent(sleightHandCheckMod))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jRadioButton23)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel47))
+                        .addComponent(stealthCheckMod))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jRadioButton13)
@@ -847,9 +848,9 @@ public class Gui extends javax.swing.JFrame {
                             .addComponent(jRadioButton16))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel30, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel28, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel29, javax.swing.GroupLayout.Alignment.TRAILING))))
+                            .addComponent(investigationCheckMod, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(insightCheckMod, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(intimidationCheckMod, javax.swing.GroupLayout.Alignment.TRAILING))))
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
@@ -858,103 +859,103 @@ public class Gui extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButton11)
-                    .addComponent(jLabel22))
+                    .addComponent(acrobaticsCheckMod))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButton25)
-                    .addComponent(jLabel23))
+                    .addComponent(animalCheckMod))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButton10)
-                    .addComponent(jLabel24))
+                    .addComponent(arcanaCheckMod))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButton8)
-                    .addComponent(jLabel25))
+                    .addComponent(athleticsCheckMod))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButton12)
-                    .addComponent(jLabel26))
+                    .addComponent(deceptionCheckMod))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButton14)
-                    .addComponent(jLabel27))
+                    .addComponent(historyCheckMod))
                 .addGap(4, 4, 4)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel28)
+                    .addComponent(insightCheckMod)
                     .addComponent(jRadioButton15))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel29)
+                    .addComponent(intimidationCheckMod)
                     .addComponent(jRadioButton13))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButton16)
-                    .addComponent(jLabel30))
+                    .addComponent(investigationCheckMod))
                 .addGap(3, 3, 3)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButton17)
-                    .addComponent(jLabel31))
+                    .addComponent(medicineCheckMod))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButton9)
-                    .addComponent(jLabel36))
+                    .addComponent(natureCheckMod))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButton18)
-                    .addComponent(jLabel42))
+                    .addComponent(perceptionCheckMod))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButton19)
-                    .addComponent(jLabel43))
+                    .addComponent(performanceCheckMod))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButton20)
-                    .addComponent(jLabel44))
+                    .addComponent(persuasionCheckMod))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButton21)
-                    .addComponent(jLabel45))
+                    .addComponent(religionCheckMod))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButton22)
-                    .addComponent(jLabel46))
+                    .addComponent(sleightHandCheckMod))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButton23)
-                    .addComponent(jLabel47))
+                    .addComponent(stealthCheckMod))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButton24)
-                    .addComponent(jLabel48))
+                    .addComponent(survivalCheckMod))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
 
-        jTextField12.setText("?");
+        raceClass.setText("?");
 
         jLabel37.setText("Race / Class");
 
-        jTextField13.setText("0");
-        jTextField13.addActionListener(new java.awt.event.ActionListener() {
+        xpScore.setText("0");
+        xpScore.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField13ActionPerformed(evt);
+                xpScoreActionPerformed(evt);
             }
         });
 
         jLabel38.setText("XP - Level 1");
 
-        jTextField14.setText("?");
-        jTextField14.addActionListener(new java.awt.event.ActionListener() {
+        alignment.setText("?");
+        alignment.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField14ActionPerformed(evt);
+                alignmentActionPerformed(evt);
             }
         });
 
         jLabel39.setText("Alignment");
 
-        jTextField15.setText("?");
+        charName.setText("?");
 
         jLabel40.setText("Name");
 
@@ -968,20 +969,20 @@ public class Gui extends javax.swing.JFrame {
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(alignment, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel39))
                             .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(xpScore, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel38))
                             .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(raceClass, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel37)))
                         .addGap(308, 308, 308))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
-                        .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(charName, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel40)
                         .addContainerGap())))
@@ -991,26 +992,26 @@ public class Gui extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(raceClass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel37))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(xpScore, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel38))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(alignment, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel39))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(charName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel40))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
 
-        jTextField16.setText("1d20");
+        diceField.setText("1d20");
 
         jButton1.setText("Roll");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -1043,7 +1044,7 @@ public class Gui extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(diceField, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1060,7 +1061,7 @@ public class Gui extends javax.swing.JFrame {
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(diceField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1)
                     .addComponent(jLabel41))
                 .addGap(18, 18, 18)
@@ -1072,35 +1073,35 @@ public class Gui extends javax.swing.JFrame {
 
         jPanel7.setBackground(new java.awt.Color(255, 255, 255));
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(3);
-        jTextArea1.setText("Personality");
-        jScrollPane1.setViewportView(jTextArea1);
+        personality.setColumns(20);
+        personality.setRows(3);
+        personality.setText("Personality");
+        jScrollPane1.setViewportView(personality);
 
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(3);
-        jTextArea2.setText("Ideals & Bonds");
-        jScrollPane2.setViewportView(jTextArea2);
+        idealsBonds.setColumns(20);
+        idealsBonds.setRows(3);
+        idealsBonds.setText("Ideals & Bonds");
+        jScrollPane2.setViewportView(idealsBonds);
 
-        jTextArea3.setColumns(20);
-        jTextArea3.setRows(3);
-        jTextArea3.setText("Flaws");
-        jScrollPane3.setViewportView(jTextArea3);
+        flaws.setColumns(20);
+        flaws.setRows(3);
+        flaws.setText("Flaws");
+        jScrollPane3.setViewportView(flaws);
 
-        jTextArea4.setColumns(20);
-        jTextArea4.setRows(5);
-        jTextArea4.setText("Equipment & Gold");
-        jScrollPane4.setViewportView(jTextArea4);
+        equipsGold.setColumns(20);
+        equipsGold.setRows(5);
+        equipsGold.setText("Equipment & Gold");
+        jScrollPane4.setViewportView(equipsGold);
 
-        jTextArea5.setColumns(20);
-        jTextArea5.setRows(5);
-        jTextArea5.setText("Features & Traits");
-        jScrollPane5.setViewportView(jTextArea5);
+        featuresTraits.setColumns(20);
+        featuresTraits.setRows(5);
+        featuresTraits.setText("Features & Traits");
+        jScrollPane5.setViewportView(featuresTraits);
 
-        jTextArea6.setColumns(20);
-        jTextArea6.setRows(4);
-        jTextArea6.setText("Proficiencies & Languages");
-        jScrollPane6.setViewportView(jTextArea6);
+        profsLanguages.setColumns(20);
+        profsLanguages.setRows(4);
+        profsLanguages.setText("Proficiencies & Languages");
+        jScrollPane6.setViewportView(profsLanguages);
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -1452,10 +1453,10 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
-        jTextField30.setText("10");
-        jTextField30.addActionListener(new java.awt.event.ActionListener() {
+        hitDiceNumber.setText("10");
+        hitDiceNumber.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField30ActionPerformed(evt);
+                hitDiceNumberActionPerformed(evt);
             }
         });
 
@@ -1465,10 +1466,10 @@ public class Gui extends javax.swing.JFrame {
 
         jLabel61.setText("/ 10 HP");
 
-        jTextField31.setText("10");
-        jTextField31.addActionListener(new java.awt.event.ActionListener() {
+        currHpScore.setText("10");
+        currHpScore.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField31ActionPerformed(evt);
+                currHpScoreActionPerformed(evt);
             }
         });
 
@@ -1522,8 +1523,8 @@ public class Gui extends javax.swing.JFrame {
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jTextField31, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
-                            .addComponent(jTextField30))
+                            .addComponent(currHpScore, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
+                            .addComponent(hitDiceNumber))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanel9Layout.createSequentialGroup()
@@ -1564,7 +1565,7 @@ public class Gui extends javax.swing.JFrame {
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(hitDiceNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel51)
                     .addComponent(jButton13)
                     .addComponent(jLabel63)
@@ -1573,7 +1574,7 @@ public class Gui extends javax.swing.JFrame {
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel61)
-                        .addComponent(jTextField31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(currHpScore, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jButton12)
                         .addComponent(jLabel64))
                     .addComponent(jCheckBox12)
@@ -1753,17 +1754,17 @@ public class Gui extends javax.swing.JFrame {
     protected int getVal(String stat) {
         switch (stat) {
             case "DEX":
-                return Integer.parseInt(jLabel9.getText());
+                return Integer.parseInt(dexModifier.getText());
             case "STR":
-                return Integer.parseInt(jLabel8.getText());
+                return Integer.parseInt(strModifier.getText());
             case "INT":
-                return Integer.parseInt(jLabel11.getText());
+                return Integer.parseInt(intModifier.getText());
             case "CON":
-                return Integer.parseInt(jLabel10.getText());
+                return Integer.parseInt(conModifier.getText());
             case "WIS":
-                return Integer.parseInt(jLabel12.getText());
+                return Integer.parseInt(wisModifier.getText());
             case "CHA":
-                return Integer.parseInt(jLabel14.getText());
+                return Integer.parseInt(chaModifier.getText());
             default:
                 try {
                     return Integer.parseInt(stat);
@@ -1774,18 +1775,19 @@ public class Gui extends javax.swing.JFrame {
     }
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String dice = jTextField16.getText();
+        String dice = diceField.getText();
+        Formula f = new Formula(dice);
         String[] fields = dice.split("d");
         int diceQuantity = Integer.parseInt(fields[0]);
         int diceValue = Integer.parseInt(fields[1]);
-        int val = getDice(diceQuantity, diceValue);
+        int val = Formula.getDice(diceQuantity, diceValue);
         if (jCheckBox1.isSelected()) {
-            int val2 = getDice(diceQuantity, diceValue);
+            int val2 = Formula.getDice(diceQuantity, diceValue);
             if (val2 > val) {
                 val = val2;
             }
         } else if (jCheckBox2.isSelected()) {
-            int val2 = getDice(diceQuantity, diceValue);
+            int val2 = Formula.getDice(diceQuantity, diceValue);
             if (val2 < val) {
                 val = val2;
             }
@@ -1797,66 +1799,59 @@ public class Gui extends javax.swing.JFrame {
         
         if (online != null) {
             if (val == 1) {
-                online.print(" rolled a " + jTextField16.getText() + " for " + val + ". CRITICAL FAIL");
+                online.print(" rolled a " + diceField.getText() + " for " + val + ". CRITICAL FAIL");
             } else if (val == diceValue) {
-                online.print(" rolled a " + jTextField16.getText() + " for " + val + ". CRITICAL SUCCESS");
+                online.print(" rolled a " + diceField.getText() + " for " + val + ". CRITICAL SUCCESS");
             } else {
-                online.print(" rolled a " + jTextField16.getText() + " for " + val);
+                online.print(" rolled a " + diceField.getText() + " for " + val);
             }
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private int getDice(int howMany, int diceSize) {
-        int val = 0;
-        Random rand = new Random(System.currentTimeMillis());
-        for (int i = 1; i <= howMany; i++) {
-            val += (Math.abs(rand.nextInt()) % diceSize + 1);
-        }
-        return val;
-    }
+    
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void strScoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_strScoreActionPerformed
         //Strength
-        int strength = Integer.parseInt(jTextField1.getText());
+        int strength = Integer.parseInt(strScore.getText());
         int mod = strength / 2 - 5;
-        jLabel8.setText("" + mod);
+        strModifier.setText("" + mod);
 
         jRadioButton1ActionPerformed(null);
 
         jRadioButton8ActionPerformed(null);
-        jLabel62.setText("" + parseACFormula(acFormula));
-    }//GEN-LAST:event_jTextField1ActionPerformed
+        acScore.setText("" + parseACFormula(acFormula));
+    }//GEN-LAST:event_strScoreActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void dexScoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dexScoreActionPerformed
         //Dexterity
-        int strength = Integer.parseInt(jTextField2.getText());
+        int strength = Integer.parseInt(dexScore.getText());
         int mod = strength / 2 - 5;
-        jLabel9.setText("" + mod);
+        dexModifier.setText("" + mod);
 
         jRadioButton2ActionPerformed(null);
 
         jRadioButton11ActionPerformed(null);
         jRadioButton22ActionPerformed(null);
         jRadioButton23ActionPerformed(null);
-        jLabel62.setText("" + parseACFormula(acFormula));
-    }//GEN-LAST:event_jTextField2ActionPerformed
+        acScore.setText("" + parseACFormula(acFormula));
+    }//GEN-LAST:event_dexScoreActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void conScoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_conScoreActionPerformed
         //Constitution
-        int strength = Integer.parseInt(jTextField3.getText());
+        int strength = Integer.parseInt(conScore.getText());
         int mod = strength / 2 - 5;
-        jLabel10.setText("" + mod);
+        conModifier.setText("" + mod);
 
         jRadioButton3ActionPerformed(null);
-        jTextField30ActionPerformed(null);
-        jLabel62.setText("" + parseACFormula(acFormula));
-    }//GEN-LAST:event_jTextField3ActionPerformed
+        hitDiceNumberActionPerformed(null);
+        acScore.setText("" + parseACFormula(acFormula));
+    }//GEN-LAST:event_conScoreActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void intScoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_intScoreActionPerformed
         //Intelligence
-        int strength = Integer.parseInt(jTextField4.getText());
+        int strength = Integer.parseInt(intScore.getText());
         int mod = strength / 2 - 5;
-        jLabel11.setText("" + mod);
+        intModifier.setText("" + mod);
 
         jRadioButton4ActionPerformed(null);
 
@@ -1865,14 +1860,14 @@ public class Gui extends javax.swing.JFrame {
         jRadioButton9ActionPerformed(null);
         jRadioButton16ActionPerformed(null);
         jRadioButton14ActionPerformed(null);
-        jLabel62.setText("" + parseACFormula(acFormula));
-    }//GEN-LAST:event_jTextField4ActionPerformed
+        acScore.setText("" + parseACFormula(acFormula));
+    }//GEN-LAST:event_intScoreActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void wisScoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wisScoreActionPerformed
         //Wisdom
-        int strength = Integer.parseInt(jTextField5.getText());
+        int strength = Integer.parseInt(wisScore.getText());
         int mod = strength / 2 - 5;
-        jLabel12.setText("" + mod);
+        wisModifier.setText("" + mod);
 
         jRadioButton5ActionPerformed(null);
 
@@ -1883,10 +1878,10 @@ public class Gui extends javax.swing.JFrame {
         jRadioButton25ActionPerformed(null);
 
         updateWisdom();
-        jLabel62.setText("" + parseACFormula(acFormula));
-    }//GEN-LAST:event_jTextField5ActionPerformed
+        acScore.setText("" + parseACFormula(acFormula));
+    }//GEN-LAST:event_wisScoreActionPerformed
 
-    private void updateWisdom() {
+    public void updateWisdom() {
         int val = 10;
         if (jCheckBox1.isSelected()) {
             val += 5;
@@ -1894,14 +1889,14 @@ public class Gui extends javax.swing.JFrame {
         if (jCheckBox2.isSelected()) {
             val -= 5;
         }
-        jLabel50.setText((val + Integer.parseInt(jLabel12.getText()) + Integer.parseInt(jLabel7.getText())) + "");
+        passWisScore.setText((val + Integer.parseInt(wisModifier.getText()) + Integer.parseInt(profScore.getText())) + "");
     }
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void chaScoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chaScoreActionPerformed
         //Charisma
-        int strength = Integer.parseInt(jTextField6.getText());
+        int strength = Integer.parseInt(chaScore.getText());
         int mod = strength / 2 - 5;
-        jLabel14.setText("" + mod);
+        chaModifier.setText("" + mod);
 
         jRadioButton6ActionPerformed(null);
 
@@ -1909,11 +1904,11 @@ public class Gui extends javax.swing.JFrame {
         jRadioButton19ActionPerformed(null);
         jRadioButton13ActionPerformed(null);
         jRadioButton12ActionPerformed(null);
-        jLabel62.setText("" + parseACFormula(acFormula));
-    }//GEN-LAST:event_jTextField6ActionPerformed
+        acScore.setText("" + parseACFormula(acFormula));
+    }//GEN-LAST:event_chaScoreActionPerformed
 
-    private void jTextField13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField13ActionPerformed
-        int xp = Integer.parseInt(jTextField13.getText());
+    private void xpScoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xpScoreActionPerformed
+        int xp = Integer.parseInt(xpScore.getText());
         int level = 0, profBonus = 0;
         if (xp >= 355000) {
             level = 20;
@@ -1977,7 +1972,7 @@ public class Gui extends javax.swing.JFrame {
             profBonus = 2;
         }
         jLabel38.setText("XP - Level " + level);
-        jLabel7.setText("+" + profBonus);
+        profScore.setText("+" + profBonus);
         jRadioButton1ActionPerformed(null);
         jRadioButton2ActionPerformed(null);
         jRadioButton3ActionPerformed(null);
@@ -2014,14 +2009,14 @@ public class Gui extends javax.swing.JFrame {
         jRadioButton12ActionPerformed(null);
 
         updateWisdom();
-        jTextField30ActionPerformed(null);
+        hitDiceNumberActionPerformed(null);
 
-    }//GEN-LAST:event_jTextField13ActionPerformed
+    }//GEN-LAST:event_xpScoreActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         Random rand = new Random();
-        int numbah = Math.abs(rand.nextInt()) % 20 + 1 + Integer.parseInt(jLabel9.getText());
-        jLabel15.setText(numbah + "");
+        int numbah = Math.abs(rand.nextInt()) % 20 + 1 + Integer.parseInt(dexModifier.getText());
+        initScore.setText(numbah + "");
         if (online != null) {
             online.print(" rolled INITIATIVE - " + numbah);
         }
@@ -2046,216 +2041,216 @@ public class Gui extends javax.swing.JFrame {
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
         // ST Strength
         if (jRadioButton1.isSelected()) {
-            jLabel16.setText((Integer.parseInt(jLabel8.getText()) + Integer.parseInt(jLabel7.getText())) + "");
+            strST.setText((Integer.parseInt(strModifier.getText()) + Integer.parseInt(profScore.getText())) + "");
         } else {
-            jLabel16.setText(jLabel8.getText());
+            strST.setText(strModifier.getText());
         }
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
         // ST Dexterity
         if (jRadioButton2.isSelected()) {
-            jLabel17.setText((Integer.parseInt(jLabel9.getText()) + Integer.parseInt(jLabel7.getText())) + "");
+            dexST.setText((Integer.parseInt(dexModifier.getText()) + Integer.parseInt(profScore.getText())) + "");
         } else {
-            jLabel17.setText(jLabel9.getText());
+            dexST.setText(dexModifier.getText());
         }
     }//GEN-LAST:event_jRadioButton2ActionPerformed
 
     private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
         // ST Constitution
         if (jRadioButton3.isSelected()) {
-            jLabel18.setText((Integer.parseInt(jLabel10.getText()) + Integer.parseInt(jLabel7.getText())) + "");
+            conST.setText((Integer.parseInt(conModifier.getText()) + Integer.parseInt(profScore.getText())) + "");
         } else {
-            jLabel18.setText(jLabel10.getText());
+            conST.setText(conModifier.getText());
         }
     }//GEN-LAST:event_jRadioButton3ActionPerformed
 
     private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
         // ST Intelligence
         if (jRadioButton4.isSelected()) {
-            jLabel19.setText((Integer.parseInt(jLabel11.getText()) + Integer.parseInt(jLabel7.getText())) + "");
+            intST.setText((Integer.parseInt(intModifier.getText()) + Integer.parseInt(profScore.getText())) + "");
         } else {
-            jLabel19.setText(jLabel11.getText());
+            intST.setText(intModifier.getText());
         }
     }//GEN-LAST:event_jRadioButton4ActionPerformed
 
     private void jRadioButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton5ActionPerformed
         // ST wisdom
         if (jRadioButton5.isSelected()) {
-            jLabel20.setText((Integer.parseInt(jLabel12.getText()) + Integer.parseInt(jLabel7.getText())) + "");
+            wisST.setText((Integer.parseInt(wisModifier.getText()) + Integer.parseInt(profScore.getText())) + "");
         } else {
-            jLabel20.setText(jLabel12.getText());
+            wisST.setText(wisModifier.getText());
         }
     }//GEN-LAST:event_jRadioButton5ActionPerformed
 
     private void jRadioButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton6ActionPerformed
         // ST charisma
         if (jRadioButton6.isSelected()) {
-            jLabel21.setText((Integer.parseInt(jLabel14.getText()) + Integer.parseInt(jLabel7.getText())) + "");
+            chaST.setText((Integer.parseInt(chaModifier.getText()) + Integer.parseInt(profScore.getText())) + "");
         } else {
-            jLabel21.setText(jLabel14.getText());
+            chaST.setText(chaModifier.getText());
         }
     }//GEN-LAST:event_jRadioButton6ActionPerformed
 
     private void jRadioButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton11ActionPerformed
         // Acrobatics
         if (jRadioButton11.isSelected()) {
-            jLabel22.setText((Integer.parseInt(jLabel9.getText()) + Integer.parseInt(jLabel7.getText())) + "");
+            acrobaticsCheckMod.setText((Integer.parseInt(dexModifier.getText()) + Integer.parseInt(profScore.getText())) + "");
         } else {
-            jLabel22.setText(jLabel9.getText());
+            acrobaticsCheckMod.setText(dexModifier.getText());
         }
     }//GEN-LAST:event_jRadioButton11ActionPerformed
 
     private void jRadioButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton22ActionPerformed
         // Sleight of Hand
         if (jRadioButton22.isSelected()) {
-            jLabel46.setText((Integer.parseInt(jLabel9.getText()) + Integer.parseInt(jLabel7.getText())) + "");
+            sleightHandCheckMod.setText((Integer.parseInt(dexModifier.getText()) + Integer.parseInt(profScore.getText())) + "");
         } else {
-            jLabel46.setText(jLabel9.getText());
+            sleightHandCheckMod.setText(dexModifier.getText());
         }
     }//GEN-LAST:event_jRadioButton22ActionPerformed
 
     private void jRadioButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton25ActionPerformed
         // Animal Handling
         if (jRadioButton25.isSelected()) {
-            jLabel23.setText((Integer.parseInt(jLabel12.getText()) + Integer.parseInt(jLabel7.getText())) + "");
+            animalCheckMod.setText((Integer.parseInt(wisModifier.getText()) + Integer.parseInt(profScore.getText())) + "");
         } else {
-            jLabel23.setText(jLabel12.getText());
+            animalCheckMod.setText(wisModifier.getText());
         }
     }//GEN-LAST:event_jRadioButton25ActionPerformed
 
     private void jRadioButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton15ActionPerformed
         //Insight
         if (jRadioButton15.isSelected()) {
-            jLabel28.setText((Integer.parseInt(jLabel12.getText()) + Integer.parseInt(jLabel7.getText())) + "");
+            insightCheckMod.setText((Integer.parseInt(wisModifier.getText()) + Integer.parseInt(profScore.getText())) + "");
         } else {
-            jLabel28.setText(jLabel12.getText());
+            insightCheckMod.setText(wisModifier.getText());
         }
     }//GEN-LAST:event_jRadioButton15ActionPerformed
 
     private void jRadioButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton17ActionPerformed
         //Medicine
         if (jRadioButton17.isSelected()) {
-            jLabel31.setText((Integer.parseInt(jLabel12.getText()) + Integer.parseInt(jLabel7.getText())) + "");
+            medicineCheckMod.setText((Integer.parseInt(wisModifier.getText()) + Integer.parseInt(profScore.getText())) + "");
         } else {
-            jLabel31.setText(jLabel12.getText());
+            medicineCheckMod.setText(wisModifier.getText());
         }
     }//GEN-LAST:event_jRadioButton17ActionPerformed
 
     private void jRadioButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton18ActionPerformed
         //Perception
         if (jRadioButton18.isSelected()) {
-            jLabel42.setText((Integer.parseInt(jLabel12.getText()) + Integer.parseInt(jLabel7.getText())) + "");
+            perceptionCheckMod.setText((Integer.parseInt(wisModifier.getText()) + Integer.parseInt(profScore.getText())) + "");
         } else {
-            jLabel42.setText(jLabel12.getText());
+            perceptionCheckMod.setText(wisModifier.getText());
         }
     }//GEN-LAST:event_jRadioButton18ActionPerformed
 
     private void jRadioButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton24ActionPerformed
         //Survival
         if (jRadioButton24.isSelected()) {
-            jLabel48.setText((Integer.parseInt(jLabel12.getText()) + Integer.parseInt(jLabel7.getText())) + "");
+            survivalCheckMod.setText((Integer.parseInt(wisModifier.getText()) + Integer.parseInt(profScore.getText())) + "");
         } else {
-            jLabel48.setText(jLabel12.getText());
+            survivalCheckMod.setText(wisModifier.getText());
         }
     }//GEN-LAST:event_jRadioButton24ActionPerformed
 
     private void jRadioButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton10ActionPerformed
         //Arcana
         if (jRadioButton10.isSelected()) {
-            jLabel24.setText((Integer.parseInt(jLabel11.getText()) + Integer.parseInt(jLabel7.getText())) + "");
+            arcanaCheckMod.setText((Integer.parseInt(intModifier.getText()) + Integer.parseInt(profScore.getText())) + "");
         } else {
-            jLabel24.setText(jLabel11.getText());
+            arcanaCheckMod.setText(intModifier.getText());
         }
     }//GEN-LAST:event_jRadioButton10ActionPerformed
 
     private void jRadioButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton14ActionPerformed
         //History
         if (jRadioButton14.isSelected()) {
-            jLabel27.setText((Integer.parseInt(jLabel11.getText()) + Integer.parseInt(jLabel7.getText())) + "");
+            historyCheckMod.setText((Integer.parseInt(intModifier.getText()) + Integer.parseInt(profScore.getText())) + "");
         } else {
-            jLabel27.setText(jLabel11.getText());
+            historyCheckMod.setText(intModifier.getText());
         }
     }//GEN-LAST:event_jRadioButton14ActionPerformed
 
     private void jRadioButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton16ActionPerformed
         //Investigation
         if (jRadioButton16.isSelected()) {
-            jLabel30.setText((Integer.parseInt(jLabel11.getText()) + Integer.parseInt(jLabel7.getText())) + "");
+            investigationCheckMod.setText((Integer.parseInt(intModifier.getText()) + Integer.parseInt(profScore.getText())) + "");
         } else {
-            jLabel30.setText(jLabel11.getText());
+            investigationCheckMod.setText(intModifier.getText());
         }
     }//GEN-LAST:event_jRadioButton16ActionPerformed
 
     private void jRadioButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton9ActionPerformed
         //Nature
         if (jRadioButton9.isSelected()) {
-            jLabel36.setText((Integer.parseInt(jLabel11.getText()) + Integer.parseInt(jLabel7.getText())) + "");
+            natureCheckMod.setText((Integer.parseInt(intModifier.getText()) + Integer.parseInt(profScore.getText())) + "");
         } else {
-            jLabel36.setText(jLabel11.getText());
+            natureCheckMod.setText(intModifier.getText());
         }
     }//GEN-LAST:event_jRadioButton9ActionPerformed
 
     private void jRadioButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton21ActionPerformed
         //Religion
         if (jRadioButton21.isSelected()) {
-            jLabel45.setText((Integer.parseInt(jLabel11.getText()) + Integer.parseInt(jLabel7.getText())) + "");
+            religionCheckMod.setText((Integer.parseInt(intModifier.getText()) + Integer.parseInt(profScore.getText())) + "");
         } else {
-            jLabel45.setText(jLabel11.getText());
+            religionCheckMod.setText(intModifier.getText());
         }
     }//GEN-LAST:event_jRadioButton21ActionPerformed
 
     private void jRadioButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton23ActionPerformed
         //Stealth
         if (jRadioButton23.isSelected()) {
-            jLabel47.setText((Integer.parseInt(jLabel9.getText()) + Integer.parseInt(jLabel7.getText())) + "");
+            stealthCheckMod.setText((Integer.parseInt(dexModifier.getText()) + Integer.parseInt(profScore.getText())) + "");
         } else {
-            jLabel47.setText(jLabel9.getText());
+            stealthCheckMod.setText(dexModifier.getText());
         }
     }//GEN-LAST:event_jRadioButton23ActionPerformed
 
     private void jRadioButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton8ActionPerformed
         //Athletics
         if (jRadioButton8.isSelected()) {
-            jLabel25.setText((Integer.parseInt(jLabel8.getText()) + Integer.parseInt(jLabel7.getText())) + "");
+            athleticsCheckMod.setText((Integer.parseInt(strModifier.getText()) + Integer.parseInt(profScore.getText())) + "");
         } else {
-            jLabel25.setText(jLabel8.getText());
+            athleticsCheckMod.setText(strModifier.getText());
         }
     }//GEN-LAST:event_jRadioButton8ActionPerformed
 
     private void jRadioButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton12ActionPerformed
         //Deception
         if (jRadioButton12.isSelected()) {
-            jLabel26.setText((Integer.parseInt(jLabel14.getText()) + Integer.parseInt(jLabel7.getText())) + "");
+            deceptionCheckMod.setText((Integer.parseInt(chaModifier.getText()) + Integer.parseInt(profScore.getText())) + "");
         } else {
-            jLabel26.setText(jLabel14.getText());
+            deceptionCheckMod.setText(chaModifier.getText());
         }
     }//GEN-LAST:event_jRadioButton12ActionPerformed
 
     private void jRadioButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton13ActionPerformed
         //Intimidation
         if (jRadioButton13.isSelected()) {
-            jLabel29.setText((Integer.parseInt(jLabel14.getText()) + Integer.parseInt(jLabel7.getText())) + "");
+            intimidationCheckMod.setText((Integer.parseInt(chaModifier.getText()) + Integer.parseInt(profScore.getText())) + "");
         } else {
-            jLabel29.setText(jLabel14.getText());
+            intimidationCheckMod.setText(chaModifier.getText());
         }
     }//GEN-LAST:event_jRadioButton13ActionPerformed
 
     private void jRadioButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton19ActionPerformed
         //Performance
         if (jRadioButton19.isSelected()) {
-            jLabel43.setText((Integer.parseInt(jLabel14.getText()) + Integer.parseInt(jLabel7.getText())) + "");
+            performanceCheckMod.setText((Integer.parseInt(chaModifier.getText()) + Integer.parseInt(profScore.getText())) + "");
         } else {
-            jLabel43.setText(jLabel14.getText());
+            performanceCheckMod.setText(chaModifier.getText());
         }
     }//GEN-LAST:event_jRadioButton19ActionPerformed
 
     private void jRadioButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton20ActionPerformed
         //Persuasion
         if (jRadioButton20.isSelected()) {
-            jLabel44.setText((Integer.parseInt(jLabel14.getText()) + Integer.parseInt(jLabel7.getText())) + "");
+            persuasionCheckMod.setText((Integer.parseInt(chaModifier.getText()) + Integer.parseInt(profScore.getText())) + "");
         } else {
-            jLabel44.setText(jLabel14.getText());
+            persuasionCheckMod.setText(chaModifier.getText());
         }
     }//GEN-LAST:event_jRadioButton20ActionPerformed
 
@@ -2308,15 +2303,15 @@ public class Gui extends javax.swing.JFrame {
     private int getAttackTypeModifier(String a) {
         switch (a) {
             case "Melee":
-                return Integer.parseInt(jLabel8.getText());
+                return Integer.parseInt(strModifier.getText());
             case "Range":
-                return Integer.parseInt(jLabel9.getText());
+                return Integer.parseInt(dexModifier.getText());
             case "Wisdm":
-                return Integer.parseInt(jLabel12.getText());
+                return Integer.parseInt(wisModifier.getText());
             case "Intel":
-                return Integer.parseInt(jLabel11.getText());
+                return Integer.parseInt(intModifier.getText());
             case "Chrsm":
-                return Integer.parseInt(jLabel14.getText());
+                return Integer.parseInt(chaModifier.getText());
             case "None ":
                 return 0;
         }
@@ -2328,10 +2323,10 @@ public class Gui extends javax.swing.JFrame {
         mod += getAttackTypeModifier(jCheckBox4.getText());
 
         if (jCheckBox5.isSelected()) {
-            mod += Integer.parseInt(jLabel7.getText());
+            mod += Integer.parseInt(profScore.getText());
         }
         jLabel56.setText(mod + "");
-        mod += getDice(1, 20);
+        mod += Formula.getDice(1, 20);
         jLabel52.setText(mod + "");
         if (online != null) {
             online.print(" rolled ATTACK on " + jTextField7.getText() + " - " + mod);
@@ -2344,7 +2339,7 @@ public class Gui extends javax.swing.JFrame {
 
         jLabel56.setText(mod + "");
         String[] fields = jTextField11.getText().split("[d+]");
-        mod += getDice(Integer.parseInt(fields[0]), Integer.parseInt(fields[1]));
+        mod += Formula.getDice(Integer.parseInt(fields[0]), Integer.parseInt(fields[1]));
         if (fields.length == 3) {
             mod += Integer.parseInt(fields[2]);
         }
@@ -2359,10 +2354,10 @@ public class Gui extends javax.swing.JFrame {
         mod += getAttackTypeModifier(jCheckBox6.getText());
 
         if (jCheckBox7.isSelected()) {
-            mod += Integer.parseInt(jLabel7.getText());
+            mod += Integer.parseInt(profScore.getText());
         }
         jLabel57.setText(mod + "");
-        mod += getDice(1, 20);
+        mod += Formula.getDice(1, 20);
         jLabel53.setText(mod + "");
         if (online != null) {
             online.print(" rolled ATTACK on " + jTextField18.getText() + " - " + mod);
@@ -2375,7 +2370,7 @@ public class Gui extends javax.swing.JFrame {
 
         jLabel57.setText(mod + "");
         String[] fields = jTextField20.getText().split("[d+]");
-        mod += getDice(Integer.parseInt(fields[0]), Integer.parseInt(fields[1]));
+        mod += Formula.getDice(Integer.parseInt(fields[0]), Integer.parseInt(fields[1]));
         if (fields.length == 3) {
             mod += Integer.parseInt(fields[2]);
         }
@@ -2390,10 +2385,10 @@ public class Gui extends javax.swing.JFrame {
         mod += getAttackTypeModifier(jCheckBox8.getText());
 
         if (jCheckBox9.isSelected()) {
-            mod += Integer.parseInt(jLabel7.getText());
+            mod += Integer.parseInt(profScore.getText());
         }
         jLabel58.setText(mod + "");
-        mod += getDice(1, 20);
+        mod += Formula.getDice(1, 20);
         jLabel54.setText(mod + "");
         if (online != null) {
             online.print(" rolled ATTACK on " + jTextField22.getText() + " - " + mod);
@@ -2406,7 +2401,7 @@ public class Gui extends javax.swing.JFrame {
 
         jLabel58.setText(mod + "");
         String[] fields = jTextField24.getText().split("[d+]");
-        mod += getDice(Integer.parseInt(fields[0]), Integer.parseInt(fields[1]));
+        mod += Formula.getDice(Integer.parseInt(fields[0]), Integer.parseInt(fields[1]));
         if (fields.length == 3) {
             mod += Integer.parseInt(fields[2]);
         }
@@ -2421,10 +2416,10 @@ public class Gui extends javax.swing.JFrame {
         mod += getAttackTypeModifier(jCheckBox10.getText());
 
         if (jCheckBox11.isSelected()) {
-            mod += Integer.parseInt(jLabel7.getText());
+            mod += Integer.parseInt(profScore.getText());
         }
         jLabel59.setText(mod + "");
-        mod += getDice(1, 20);
+        mod += Formula.getDice(1, 20);
         jLabel55.setText(mod + "");
         if (online != null) {
             online.print(" rolled ATTACK on " + jTextField26.getText() + " - " + mod);
@@ -2437,7 +2432,7 @@ public class Gui extends javax.swing.JFrame {
 
         jLabel59.setText(mod + "");
         String[] fields = jTextField28.getText().split("[d+]");
-        mod += getDice(Integer.parseInt(fields[0]), Integer.parseInt(fields[1]));
+        mod += Formula.getDice(Integer.parseInt(fields[0]), Integer.parseInt(fields[1]));
         if (fields.length == 3) {
             mod += Integer.parseInt(fields[2]);
         }
@@ -2447,25 +2442,26 @@ public class Gui extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton10ActionPerformed
 
-    private void jTextField30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField30ActionPerformed
-        int diceN = Integer.parseInt(jTextField30.getText());
+    private void hitDiceNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hitDiceNumberActionPerformed
+        int diceN = Integer.parseInt(hitDiceNumber.getText());
         int level = getCurrentLevel();
-        int constMod = Integer.parseInt(jLabel10.getText());
+        int constMod = Integer.parseInt(conModifier.getText());
         if (level == 1) {
             // Base HP at lvl 1
             jLabel61.setText("/ " + (diceN + constMod) + " HP");
         } else {
             // Base HP + (avg+con) per level
-            jLabel61.setText("/ " + (diceN + constMod + ((diceN / 2) + 1 + Integer.parseInt(jLabel10.getText())) * (level - 1)) + " HP");
+            jLabel61.setText("/ " + (diceN + constMod + ((diceN / 2) + 1 + Integer.parseInt(conModifier.getText())) * (level - 1)) + " HP");
         }
         jLabel60.setText(level + " Hit Dice Left");
-    }//GEN-LAST:event_jTextField30ActionPerformed
+    }//GEN-LAST:event_hitDiceNumberActionPerformed
 
     private int getCurrentLevel() {
         return Integer.parseInt(jLabel38.getText().split(" ")[3]);
     }
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        // full hp, get half the max hit die; only 1 long rest per day
         //int diceN = Integer.parseInt(jTextField30.getText());
         int maxDice = getCurrentLevel();
         int currentDice = Integer.parseInt(jLabel60.getText().split(" ")[0]);
@@ -2481,9 +2477,10 @@ public class Gui extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-        int currHP = Integer.parseInt(jTextField31.getText());
-        int diceN = Integer.parseInt(jTextField30.getText());
-        int regenHP = getDice(1, diceN);
+        // regen hit die + con; use as many hit die as needed per rest
+        int currHP = Integer.parseInt(currHpScore.getText());
+        int diceN = Integer.parseInt(hitDiceNumber.getText());
+        int regenHP = Formula.getDice(1, diceN)+Integer.parseInt(conModifier.getText());
         currHP += regenHP;
         int maxHP = Integer.parseInt(jLabel61.getText().split(" ")[1]);
         if (currHP > maxHP) {
@@ -2494,7 +2491,7 @@ public class Gui extends javax.swing.JFrame {
             if (online != null) {
                 online.print(" has made a SHORT REST. He now has " + currHP + "/" + maxHP + " HP");
             }
-            jTextField31.setText(currHP + "");
+            currHpScore.setText(currHP + "");
             jLabel60.setText((diceLeft - 1) + " Hit Dice Left");
         }
         if (diceLeft - 1 == 0) {
@@ -2503,17 +2500,17 @@ public class Gui extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-
+        
         if (jCheckBox17.isSelected()) {
             //stable
-            int d = getDice(1, 4);
+            int d = Formula.getDice(1, 4);
             jLabel63.setText(d + "h");
             if (online != null) {
                 online.print(" is passed out for " + d + " hours");
             }
         } else {
             //dying
-            int d = getDice(1, 20);
+            int d = Formula.getDice(1, 20);
             jLabel63.setText(String.format("%2d", d));
             if (online != null) {
                 online.print(" rolled a DEATH SAVE - " + d);
@@ -2563,8 +2560,8 @@ public class Gui extends javax.swing.JFrame {
         }
     }
 
-    private void jTextField31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField31ActionPerformed
-        int hp = Integer.parseInt(jTextField31.getText());
+    private void currHpScoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_currHpScoreActionPerformed
+        int hp = Integer.parseInt(currHpScore.getText());
         if (hp > 0) {
             jButton13.setEnabled(false);
             jCheckBox17.setSelected(false);
@@ -2600,49 +2597,49 @@ public class Gui extends javax.swing.JFrame {
             jCheckBox15.setEnabled(true);
             jCheckBox16.setEnabled(true);
         }
-    }//GEN-LAST:event_jTextField31ActionPerformed
+    }//GEN-LAST:event_currHpScoreActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
-        if (jTextField1.getText().equals("")) {
-            jTextField1.setText(" ");
+        if (strScore.getText().equals("")) {
+            strScore.setText(" ");
         }
-        if (jTextField2.getText().equals("")) {
-            jTextField2.setText(" ");
+        if (dexScore.getText().equals("")) {
+            dexScore.setText(" ");
         }
-        if (jTextField3.getText().equals("")) {
-            jTextField3.setText(" ");
+        if (conScore.getText().equals("")) {
+            conScore.setText(" ");
         }
-        if (jTextField4.getText().equals("")) {
-            jTextField4.setText(" ");
+        if (intScore.getText().equals("")) {
+            intScore.setText(" ");
         }
-        if (jTextField5.getText().equals("")) {
-            jTextField5.setText(" ");
+        if (wisScore.getText().equals("")) {
+            wisScore.setText(" ");
         }
-        if (jTextField6.getText().equals("")) {
-            jTextField6.setText(" ");
-        }
-
-        if (jTextField10.getText().equals("")) {
-            jTextField10.setText(" ");
-        }
-        if (jTextField30.getText().equals("")) {
-            jTextField30.setText(" ");
-        }
-        if (jTextField31.getText().equals("")) {
-            jTextField31.setText(" ");
+        if (chaScore.getText().equals("")) {
+            chaScore.setText(" ");
         }
 
-        if (jTextField12.getText().equals("")) {
-            jTextField12.setText(" ");
+        if (speedScore.getText().equals("")) {
+            speedScore.setText(" ");
         }
-        if (jTextField13.getText().equals("")) {
-            jTextField13.setText(" ");
+        if (hitDiceNumber.getText().equals("")) {
+            hitDiceNumber.setText(" ");
         }
-        if (jTextField14.getText().equals("")) {
-            jTextField14.setText(" ");
+        if (currHpScore.getText().equals("")) {
+            currHpScore.setText(" ");
         }
-        if (jTextField15.getText().equals("")) {
-            jTextField15.setText(" ");
+
+        if (raceClass.getText().equals("")) {
+            raceClass.setText(" ");
+        }
+        if (xpScore.getText().equals("")) {
+            xpScore.setText(" ");
+        }
+        if (alignment.getText().equals("")) {
+            alignment.setText(" ");
+        }
+        if (charName.getText().equals("")) {
+            charName.setText(" ");
         }
 
         if (jTextField7.getText().equals("")) {
@@ -2702,12 +2699,12 @@ public class Gui extends javax.swing.JFrame {
             File a = saveFile.getSelectedFile();
             try {
                 try (PrintWriter out = new PrintWriter(a)) {
-                    out.println("str=" + jTextField1.getText());
-                    out.println("dex=" + jTextField2.getText());
-                    out.println("con=" + jTextField3.getText());
-                    out.println("int=" + jTextField4.getText());
-                    out.println("wis=" + jTextField5.getText());
-                    out.println("cha=" + jTextField6.getText());
+                    out.println("str=" + strScore.getText());
+                    out.println("dex=" + dexScore.getText());
+                    out.println("con=" + conScore.getText());
+                    out.println("int=" + intScore.getText());
+                    out.println("wis=" + wisScore.getText());
+                    out.println("cha=" + chaScore.getText());
 
                     out.println("STstr=" + jRadioButton1.isSelected());
                     out.println("STdex=" + jRadioButton2.isSelected());
@@ -2717,9 +2714,9 @@ public class Gui extends javax.swing.JFrame {
                     out.println("STcha=" + jRadioButton6.isSelected());
 
                     out.println("ac=" + acFormula);
-                    out.println("speed=" + jTextField10.getText());
-                    out.println("diceN=" + jTextField30.getText());
-                    out.println("hp=" + jTextField31.getText());
+                    out.println("speed=" + speedScore.getText());
+                    out.println("diceN=" + hitDiceNumber.getText());
+                    out.println("hp=" + currHpScore.getText());
 
                     out.println("acr=" + jRadioButton11.isSelected());
                     out.println("ah=" + jRadioButton25.isSelected());
@@ -2740,10 +2737,10 @@ public class Gui extends javax.swing.JFrame {
                     out.println("stealth=" + jRadioButton23.isSelected());
                     out.println("survi=" + jRadioButton24.isSelected());
 
-                    out.println("raceclass=" + jTextField12.getText());
-                    out.println("xp=" + jTextField13.getText());
-                    out.println("align=" + jTextField14.getText());
-                    out.println("name=" + jTextField15.getText());
+                    out.println("raceclass=" + raceClass.getText());
+                    out.println("xp=" + xpScore.getText());
+                    out.println("align=" + alignment.getText());
+                    out.println("name=" + charName.getText());
 
                     out.println("wep1name=" + jTextField7.getText());
                     out.println("wep1Amod=" + jTextField9.getText());
@@ -2773,12 +2770,12 @@ public class Gui extends javax.swing.JFrame {
                     out.println("wep4Wtype=" + jCheckBox10.getText());
                     out.println("wep4prof=" + jCheckBox11.isSelected());
 
-                    out.println("person=<" + jTextArea1.getText().replaceAll("<", "").replaceAll(">", "") + ">");
-                    out.println("ideals=<" + jTextArea2.getText().replaceAll("<", "").replaceAll(">", "") + ">");
-                    out.println("flaws=<" + jTextArea3.getText().replaceAll("<", "").replaceAll(">", "") + ">");
-                    out.println("equipsGold=<" + jTextArea4.getText().replaceAll("<", "").replaceAll(">", "") + ">");
-                    out.println("featuresTraits=<" + jTextArea5.getText().replaceAll("<", "").replaceAll(">", "") + ">");
-                    out.println("profsLangs=<" + jTextArea6.getText().replaceAll("<", "").replaceAll(">", "") + ">");
+                    out.println("person=<" + personality.getText().replaceAll("<", "").replaceAll(">", "") + ">");
+                    out.println("ideals=<" + idealsBonds.getText().replaceAll("<", "").replaceAll(">", "") + ">");
+                    out.println("flaws=<" + flaws.getText().replaceAll("<", "").replaceAll(">", "") + ">");
+                    out.println("equipsGold=<" + equipsGold.getText().replaceAll("<", "").replaceAll(">", "") + ">");
+                    out.println("featuresTraits=<" + featuresTraits.getText().replaceAll("<", "").replaceAll(">", "") + ">");
+                    out.println("profsLangs=<" + profsLanguages.getText().replaceAll("<", "").replaceAll(">", "") + ">");
                 }
             } catch (FileNotFoundException ex) {
                 Logger.getLogger(Gui.class.getName()).log(Level.SEVERE, null, ex);
@@ -2794,18 +2791,18 @@ public class Gui extends javax.swing.JFrame {
             try {
                 Scanner fin = new Scanner(a);
 
-                jTextField1.setText(fin.nextLine().split("=")[1]);
-                jTextField2.setText(fin.nextLine().split("=")[1]);
-                jTextField3.setText(fin.nextLine().split("=")[1]);
-                jTextField4.setText(fin.nextLine().split("=")[1]);
-                jTextField5.setText(fin.nextLine().split("=")[1]);
-                jTextField6.setText(fin.nextLine().split("=")[1]);
-                jTextField1ActionPerformed(null);
-                jTextField2ActionPerformed(null);
-                jTextField3ActionPerformed(null);
-                jTextField4ActionPerformed(null);
-                jTextField5ActionPerformed(null);
-                jTextField6ActionPerformed(null);
+                strScore.setText(fin.nextLine().split("=")[1]);
+                dexScore.setText(fin.nextLine().split("=")[1]);
+                conScore.setText(fin.nextLine().split("=")[1]);
+                intScore.setText(fin.nextLine().split("=")[1]);
+                wisScore.setText(fin.nextLine().split("=")[1]);
+                chaScore.setText(fin.nextLine().split("=")[1]);
+                strScoreActionPerformed(null);
+                dexScoreActionPerformed(null);
+                conScoreActionPerformed(null);
+                intScoreActionPerformed(null);
+                wisScoreActionPerformed(null);
+                chaScoreActionPerformed(null);
 
                 jRadioButton1.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
                 jRadioButton2.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
@@ -2821,14 +2818,14 @@ public class Gui extends javax.swing.JFrame {
                 jRadioButton6ActionPerformed(null);
 
                 acFormula = fin.nextLine().split("=")[1];
-                jTextField10.setText(fin.nextLine().split("=")[1]);
-                jTextField30.setText(fin.nextLine().split("=")[1]);
-                jTextField31.setText(fin.nextLine().split("=")[1]);
-                jLabel62.setText("" + parseACFormula(acFormula));
-
+                speedScore.setText(fin.nextLine().split("=")[1]);
+                hitDiceNumber.setText(fin.nextLine().split("=")[1]);
+                currHpScore.setText(fin.nextLine().split("=")[1]);
+                acScore.setText("" + parseACFormula(acFormula));
+                
                 //jTextField10ActionPerformed(null);
-                jTextField30ActionPerformed(null);
-                jTextField31ActionPerformed(null);
+                hitDiceNumberActionPerformed(null);
+                currHpScoreActionPerformed(null);
 
                 jRadioButton11.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
                 jRadioButton25.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
@@ -2867,12 +2864,12 @@ public class Gui extends javax.swing.JFrame {
                 jRadioButton23ActionPerformed(null);
                 jRadioButton24ActionPerformed(null);
 
-                jTextField12.setText(fin.nextLine().split("=")[1]);
-                jTextField13.setText(fin.nextLine().split("=")[1]);
-                jTextField14.setText(fin.nextLine().split("=")[1]);
-                jTextField15.setText(fin.nextLine().split("=")[1]);
+                raceClass.setText(fin.nextLine().split("=")[1]);
+                xpScore.setText(fin.nextLine().split("=")[1]);
+                alignment.setText(fin.nextLine().split("=")[1]);
+                charName.setText(fin.nextLine().split("=")[1]);
                 //jTextField12ActionPerformed(null);
-                jTextField13ActionPerformed(null);
+                xpScoreActionPerformed(null);
                 //jTextField14ActionPerformed(null);
                 //jTextField15ActionPerformed(null);
 
@@ -2911,7 +2908,7 @@ public class Gui extends javax.swing.JFrame {
                     temp = fin.nextLine();
                 }
                 person += temp.substring(0, temp.length() - 1);
-                jTextArea1.setText(person);
+                personality.setText(person);
 
                 String ideals = "";
                 temp = fin.nextLine().split("=")[1].substring(1);
@@ -2920,16 +2917,16 @@ public class Gui extends javax.swing.JFrame {
                     temp = fin.nextLine();
                 }
                 ideals += temp.substring(0, temp.length() - 1);
-                jTextArea2.setText(ideals);
+                idealsBonds.setText(ideals);
 
-                String flaws = "";
+                String flaws2 = "";
                 temp = fin.nextLine().split("=")[1].substring(1);
                 while (!temp.contains(">")) {
-                    flaws += temp + "\n";
+                    flaws2 += temp + "\n";
                     temp = fin.nextLine();
                 }
-                flaws += temp.substring(0, temp.length() - 1);
-                jTextArea3.setText(flaws);
+                flaws2 += temp.substring(0, temp.length() - 1);
+                flaws.setText(flaws2);
 
                 String equips = "";
                 temp = fin.nextLine().split("=")[1].substring(1);
@@ -2938,7 +2935,7 @@ public class Gui extends javax.swing.JFrame {
                     temp = fin.nextLine();
                 }
                 equips += temp.substring(0, temp.length() - 1);
-                jTextArea4.setText(equips);
+                equipsGold.setText(equips);
 
                 String features = "";
                 temp = fin.nextLine().split("=")[1].substring(1);
@@ -2947,7 +2944,7 @@ public class Gui extends javax.swing.JFrame {
                     temp = fin.nextLine();
                 }
                 features += temp.substring(0, temp.length() - 1);
-                jTextArea5.setText(features);
+                featuresTraits.setText(features);
 
                 String profs = "";
                 temp = fin.nextLine().split("=")[1].substring(1);
@@ -2956,7 +2953,7 @@ public class Gui extends javax.swing.JFrame {
                     temp = fin.nextLine();
                 }
                 profs += temp.substring(0, temp.length() - 1);
-                jTextArea6.setText(profs);
+                profsLanguages.setText(profs);
 
                 fin.close();
             } catch (FileNotFoundException ex) {
@@ -2969,9 +2966,9 @@ public class Gui extends javax.swing.JFrame {
         javax.swing.JFrame l = this;
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                AC dialog = new AC(l, true, Integer.parseInt(jLabel8.getText()), Integer.parseInt(jLabel9.getText()), Integer.parseInt(jLabel10.getText()),
-                        Integer.parseInt(jLabel11.getText()), Integer.parseInt(jLabel12.getText()), Integer.parseInt(jLabel14.getText()),
-                        Integer.parseInt(jTextField1.getText()), jLabel62);
+                AC dialog = new AC(l, true, Integer.parseInt(strModifier.getText()), Integer.parseInt(dexModifier.getText()), Integer.parseInt(conModifier.getText()),
+                        Integer.parseInt(intModifier.getText()), Integer.parseInt(wisModifier.getText()), Integer.parseInt(chaModifier.getText()),
+                        Integer.parseInt(strScore.getText()), acScore);
 
                 dialog.setVisible(true);
             }
@@ -3007,15 +3004,15 @@ public class Gui extends javax.swing.JFrame {
         javax.swing.JFrame l = this;
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                Connect dialog = new Connect(l, true, jTextField15.getText());
+                Connect dialog = new Connect(l, true, charName.getText());
                 dialog.setVisible(true);
             }
         });
     }//GEN-LAST:event_jButton17ActionPerformed
 
-    private void jTextField14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField14ActionPerformed
+    private void alignmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alignmentActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField14ActionPerformed
+    }//GEN-LAST:event_alignmentActionPerformed
 
     /**
      * @param args the command line arguments
@@ -3054,6 +3051,38 @@ public class Gui extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel acScore;
+    private javax.swing.JLabel acrobaticsCheckMod;
+    private javax.swing.JTextField alignment;
+    private javax.swing.JLabel animalCheckMod;
+    private javax.swing.JLabel arcanaCheckMod;
+    private javax.swing.JLabel athleticsCheckMod;
+    private javax.swing.JLabel chaModifier;
+    private javax.swing.JLabel chaST;
+    private javax.swing.JTextField chaScore;
+    private javax.swing.JTextField charName;
+    private javax.swing.JLabel conModifier;
+    private javax.swing.JLabel conST;
+    private javax.swing.JTextField conScore;
+    private javax.swing.JTextField currHpScore;
+    private javax.swing.JLabel deceptionCheckMod;
+    private javax.swing.JLabel dexModifier;
+    private javax.swing.JLabel dexST;
+    private javax.swing.JTextField dexScore;
+    private javax.swing.JTextField diceField;
+    private javax.swing.JTextArea equipsGold;
+    private javax.swing.JTextArea featuresTraits;
+    private javax.swing.JTextArea flaws;
+    private javax.swing.JLabel historyCheckMod;
+    private javax.swing.JTextField hitDiceNumber;
+    private javax.swing.JTextArea idealsBonds;
+    private javax.swing.JLabel initScore;
+    private javax.swing.JLabel insightCheckMod;
+    private javax.swing.JLabel intModifier;
+    private javax.swing.JLabel intST;
+    private javax.swing.JTextField intScore;
+    private javax.swing.JLabel intimidationCheckMod;
+    private javax.swing.JLabel investigationCheckMod;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
@@ -3090,51 +3119,21 @@ public class Gui extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox8;
     private javax.swing.JCheckBox jCheckBox9;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
-    private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
-    private javax.swing.JLabel jLabel42;
-    private javax.swing.JLabel jLabel43;
-    private javax.swing.JLabel jLabel44;
-    private javax.swing.JLabel jLabel45;
-    private javax.swing.JLabel jLabel46;
-    private javax.swing.JLabel jLabel47;
-    private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel53;
@@ -3147,13 +3146,9 @@ public class Gui extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel60;
     private javax.swing.JLabel jLabel61;
-    private javax.swing.JLabel jLabel62;
     private javax.swing.JLabel jLabel63;
     private javax.swing.JLabel jLabel64;
     private javax.swing.JLabel jLabel65;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -3193,24 +3188,10 @@ public class Gui extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea2;
-    private javax.swing.JTextArea jTextArea3;
-    private javax.swing.JTextArea jTextArea4;
-    private javax.swing.JTextArea jTextArea5;
-    private javax.swing.JTextArea jTextArea6;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField15;
-    private javax.swing.JTextField jTextField16;
     private javax.swing.JTextField jTextField17;
     private javax.swing.JTextField jTextField18;
     private javax.swing.JTextField jTextField19;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField20;
     private javax.swing.JTextField jTextField21;
     private javax.swing.JTextField jTextField22;
@@ -3221,13 +3202,29 @@ public class Gui extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField27;
     private javax.swing.JTextField jTextField28;
     private javax.swing.JTextField jTextField29;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField30;
-    private javax.swing.JTextField jTextField31;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField9;
+    private javax.swing.JLabel medicineCheckMod;
+    private javax.swing.JLabel natureCheckMod;
+    private javax.swing.JLabel passWisScore;
+    private javax.swing.JLabel perceptionCheckMod;
+    private javax.swing.JLabel performanceCheckMod;
+    private javax.swing.JTextArea personality;
+    private javax.swing.JLabel persuasionCheckMod;
+    private javax.swing.JLabel profScore;
+    private javax.swing.JTextArea profsLanguages;
+    private javax.swing.JTextField raceClass;
+    private javax.swing.JLabel religionCheckMod;
+    private javax.swing.JLabel sleightHandCheckMod;
+    private javax.swing.JTextField speedScore;
+    private javax.swing.JLabel stealthCheckMod;
+    private javax.swing.JLabel strModifier;
+    private javax.swing.JLabel strST;
+    private javax.swing.JTextField strScore;
+    private javax.swing.JLabel survivalCheckMod;
+    private javax.swing.JLabel wisModifier;
+    private javax.swing.JLabel wisST;
+    private javax.swing.JTextField wisScore;
+    private javax.swing.JTextField xpScore;
     // End of variables declaration//GEN-END:variables
 }
