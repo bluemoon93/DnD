@@ -33,9 +33,9 @@ public class Formula {
             form = "0";
         }
 
-        if (!Character.isDigit(form.charAt(0))) {
+        /*if (!Character.isDigit(form.charAt(0))) {
             form = "0" + form;
-        }
+        }*/
         /*if (form.charAt(0) != '+' && form.charAt(0) != '-') {
          form = "+" + form;
          }*/
@@ -101,7 +101,9 @@ public class Formula {
     public static int getSmallestIndex(String f, char c1, char c2) {
         int index = f.indexOf(c1);
         int index2 = f.indexOf(c2);
-        if (index == -1 || index2 != -1) {
+        if (index == -1){
+            index=index2;
+        }else if(index2 != -1) {
             index = Math.min(index, index2);
         }
         return index;

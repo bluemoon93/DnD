@@ -6,8 +6,6 @@
 package Utils;
 
 import Swing.Gui;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 
@@ -59,62 +57,72 @@ public class MiscListener implements DocumentListener {
     }
     
     private void updateHidDice(){
-        int diceN = Integer.parseInt(g.hitDiceNumber.getText());
+        int diceN;
+        try{
+            diceN= Integer.parseInt(g.hPPanel1.hitDiceNumber.getText());
+        }catch(Exception ex){
+            return;
+        } 
         int level = g.getCurrentLevel();
         int constMod = g.getModifier("CON");
         if (level == 1) {
             // Base HP at lvl 1
-            g.jLabel61.setText("/ " + (diceN + constMod) + " HP");
+            g.hPPanel1.jLabel61.setText("/ " + (diceN + constMod) + " HP");
         } else {
             // Base HP + (avg+con) per level
-            g.jLabel61.setText("/ " + (diceN + constMod + ((diceN / 2) + 1 + constMod) * (level - 1)) + " HP");
+            g.hPPanel1.jLabel61.setText("/ " + (diceN + constMod + ((diceN / 2) + 1 + constMod) * (level - 1)) + " HP");
         }
-        g.jLabel60.setText(level + " Hit Dice Left");
+        g.hPPanel1.jLabel60.setText(level + " Hit Dice Left");
     }
     
     private void updateCurrHp(){
-        int hp = Integer.parseInt(g.currHpScore.getText());
+        int hp;
+        try{
+            hp= Integer.parseInt(g.hPPanel1.currHpScore.getText());
+        }catch(Exception ex){
+            return;
+        }
         if (hp > 0) {
-            g.jButton13.setEnabled(false);
-            g.jCheckBox17.setSelected(false);
-            g.jCheckBox3.setSelected(false);
-            g.jCheckBox12.setSelected(false);
-            g.jCheckBox13.setSelected(false);
-            g.jCheckBox14.setSelected(false);
-            g.jCheckBox15.setSelected(false);
-            g.jCheckBox16.setSelected(false);
+            g.hPPanel1.jButton13.setEnabled(false);
+            g.hPPanel1.jCheckBox17.setSelected(false);
+            g.hPPanel1.jCheckBox3.setSelected(false);
+            g.hPPanel1.jCheckBox12.setSelected(false);
+            g.hPPanel1.jCheckBox13.setSelected(false);
+            g.hPPanel1.jCheckBox14.setSelected(false);
+            g.hPPanel1.jCheckBox15.setSelected(false);
+            g.hPPanel1.jCheckBox16.setSelected(false);
 
-            g.jCheckBox17.setEnabled(false);
-            g.jCheckBox3.setEnabled(false);
-            g.jCheckBox12.setEnabled(false);
-            g.jCheckBox13.setEnabled(false);
-            g.jCheckBox14.setEnabled(false);
-            g.jCheckBox15.setEnabled(false);
-            g.jCheckBox16.setEnabled(false);
+            g.hPPanel1.jCheckBox17.setEnabled(false);
+            g.hPPanel1.jCheckBox3.setEnabled(false);
+            g.hPPanel1.jCheckBox12.setEnabled(false);
+            g.hPPanel1.jCheckBox13.setEnabled(false);
+            g.hPPanel1.jCheckBox14.setEnabled(false);
+            g.hPPanel1.jCheckBox15.setEnabled(false);
+            g.hPPanel1.jCheckBox16.setEnabled(false);
 
-            g.stableButtonActionListener();
+            g.hPPanel1.stableButtonActionListener();
 
-            g.jButton12.setEnabled(true);
-            g.jButton11.setEnabled(true);
+            g.hPPanel1.jButton12.setEnabled(true);
+            g.hPPanel1.jButton11.setEnabled(true);
         } else {
-            g.jButton13.setEnabled(true);
-            g.jButton12.setEnabled(false);
-            g.jButton11.setEnabled(false);
+            g.hPPanel1.jButton13.setEnabled(true);
+            g.hPPanel1.jButton12.setEnabled(false);
+            g.hPPanel1.jButton11.setEnabled(false);
 
-            g.jCheckBox17.setEnabled(true);
-            g.jCheckBox3.setEnabled(true);
-            g.jCheckBox12.setEnabled(true);
-            g.jCheckBox13.setEnabled(true);
-            g.jCheckBox14.setEnabled(true);
-            g.jCheckBox15.setEnabled(true);
-            g.jCheckBox16.setEnabled(true);
+            g.hPPanel1.jCheckBox17.setEnabled(true);
+            g.hPPanel1.jCheckBox3.setEnabled(true);
+            g.hPPanel1.jCheckBox12.setEnabled(true);
+            g.hPPanel1.jCheckBox13.setEnabled(true);
+            g.hPPanel1.jCheckBox14.setEnabled(true);
+            g.hPPanel1.jCheckBox15.setEnabled(true);
+            g.hPPanel1.jCheckBox16.setEnabled(true);
         }
     }
     
     private void updateXP(){
         int xp;
         try{
-            xp = Integer.parseInt(g.xpScore.getText());
+            xp = Integer.parseInt(g.namePanel1.xpScore.getText());
         }catch(Exception ex){
             return;
         }
@@ -181,45 +189,50 @@ public class MiscListener implements DocumentListener {
             level = 1;
             profBonus = 2;
         }
-        g.jLabel38.setText("XP - Level " + level);
-        g.profScore.setText("+" + profBonus);
-        g.stActionListener(g.jRadioButton1, g.strST, "STR");
-        g.stActionListener(g.jRadioButton2, g.dexST, "DEX");
-        g.stActionListener(g.jRadioButton3, g.conST, "CON");
-        g.stActionListener(g.jRadioButton4, g.intST, "INT");
-        g.stActionListener(g.jRadioButton5, g.wisST, "WIS");
-        g.stActionListener(g.jRadioButton6, g.chaST, "CHA");
+        g.namePanel1.jLabel38.setText("XP - Level " + level);
+        g.aCPanel1.profScore.setText("+" + profBonus);
+        g.sTPanel1.stActionListener(g.sTPanel1.jRadioButton1, g.sTPanel1.strST, "STR");
+        g.sTPanel1.stActionListener(g.sTPanel1.jRadioButton2, g.sTPanel1.dexST, "DEX");
+        g.sTPanel1.stActionListener(g.sTPanel1.jRadioButton3, g.sTPanel1.conST, "CON");
+        g.sTPanel1.stActionListener(g.sTPanel1.jRadioButton4, g.sTPanel1.intST, "INT");
+        g.sTPanel1.stActionListener(g.sTPanel1.jRadioButton5, g.sTPanel1.wisST, "WIS");
+        g.sTPanel1.stActionListener(g.sTPanel1.jRadioButton6, g.sTPanel1.chaST, "CHA");
 
         //dex
-        g.skillActionListener(g.jRadioButton11, g.acrobaticsCheckMod, "DEX");
-        g.skillActionListener(g.jRadioButton22, g.sleightHandCheckMod, "DEX");
-        g.skillActionListener(g.jRadioButton23, g.stealthCheckMod, "DEX");
+        g.skillsPanel1.updateDexSkills();
+        //g.skillsPanel1.skillActionListener(g.skillsPanel1.jRadioButton11, g.skillsPanel1.acrobaticsCheckMod, "DEX");
+        //g.skillsPanel1.skillActionListener(g.skillsPanel1.jRadioButton22, g.skillsPanel1.sleightHandCheckMod, "DEX");
+        //g.skillsPanel1.skillActionListener(g.skillsPanel1.jRadioButton23, g.skillsPanel1.stealthCheckMod, "DEX");
 
         //wis
-        g.skillActionListener(g.jRadioButton25, g.animalCheckMod, "WIS");
-        g.skillActionListener(g.jRadioButton15, g.insightCheckMod, "WIS");
-        g.skillActionListener(g.jRadioButton17, g.medicineCheckMod, "WIS");
-        g.skillActionListener(g.jRadioButton18, g.perceptionCheckMod, "WIS");
-        g.skillActionListener(g.jRadioButton24, g.survivalCheckMod, "WIS");
-
+        g.skillsPanel1.updateWisSkills();
+        /*g.skillsPanel1.skillActionListener(g.skillsPanel1.jRadioButton25, g.skillsPanel1.animalCheckMod, "WIS");
+        g.skillsPanel1.skillActionListener(g.skillsPanel1.jRadioButton15, g.skillsPanel1.insightCheckMod, "WIS");
+        g.skillsPanel1.skillActionListener(g.skillsPanel1.jRadioButton17, g.skillsPanel1.medicineCheckMod, "WIS");
+        g.skillsPanel1.skillActionListener(g.skillsPanel1.jRadioButton18, g.skillsPanel1.perceptionCheckMod, "WIS");
+        g.skillsPanel1.skillActionListener(g.skillsPanel1.jRadioButton24, g.skillsPanel1.survivalCheckMod, "WIS");
+                */
         //int
-        g.skillActionListener(g.jRadioButton21, g.religionCheckMod, "INT");
-        g.skillActionListener(g.jRadioButton10, g.arcanaCheckMod, "INT");
-        g.skillActionListener(g.jRadioButton14, g.historyCheckMod, "INT");
-        g.skillActionListener(g.jRadioButton16, g.investigationCheckMod, "INT");
-        g.skillActionListener(g.jRadioButton9, g.natureCheckMod, "INT");
-
+        g.skillsPanel1.updateIntSkills();
+        /*g.skillsPanel1.skillActionListener(g.skillsPanel1.jRadioButton21, g.skillsPanel1.religionCheckMod, "INT");
+        g.skillsPanel1.skillActionListener(g.skillsPanel1.jRadioButton10, g.skillsPanel1.arcanaCheckMod, "INT");
+        g.skillsPanel1.skillActionListener(g.skillsPanel1.jRadioButton14, g.skillsPanel1.historyCheckMod, "INT");
+        g.skillsPanel1.skillActionListener(g.skillsPanel1.jRadioButton16, g.skillsPanel1.investigationCheckMod, "INT");
+        g.skillsPanel1.skillActionListener(g.skillsPanel1.jRadioButton9, g.skillsPanel1.natureCheckMod, "INT");
+*/
         //str
-        g.skillActionListener(g.jRadioButton8, g.athleticsCheckMod, "STR");
+        g.skillsPanel1.updateStrSkills();
+        //g.skillsPanel1.skillActionListener(g.skillsPanel1.jRadioButton8, g.skillsPanel1.athleticsCheckMod, "STR");
 
         //cha
-        g.skillActionListener(g.jRadioButton12, g.deceptionCheckMod, "CHA");
-        g.skillActionListener(g.jRadioButton13, g.intimidationCheckMod, "CHA");
-        g.skillActionListener(g.jRadioButton19, g.performanceCheckMod, "CHA");
-        g.skillActionListener(g.jRadioButton20, g.persuasionCheckMod, "CHA");
-
+        g.skillsPanel1.updateChaSkills();
+        /*g.skillsPanel1.skillActionListener(g.skillsPanel1.jRadioButton12, g.skillsPanel1.deceptionCheckMod, "CHA");
+        g.skillsPanel1.skillActionListener(g.skillsPanel1.jRadioButton13, g.skillsPanel1.intimidationCheckMod, "CHA");
+        g.skillsPanel1.skillActionListener(g.skillsPanel1.jRadioButton19, g.skillsPanel1.performanceCheckMod, "CHA");
+        g.skillsPanel1.skillActionListener(g.skillsPanel1.jRadioButton20, g.skillsPanel1.persuasionCheckMod, "CHA");
+*/
         g.updatePassiveWisdom();
-        g.hitDiceML.update();
+        g.hPPanel1.hitDiceML.update();
         //g.hitDiceNumberActionPerformed(null);
 
     }

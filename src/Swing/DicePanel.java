@@ -13,7 +13,8 @@ import Utils.Formula;
  */
 public class DicePanel extends javax.swing.JPanel {
 
-    Gui gui;
+    Gui g;
+
     /**
      * Creates new form dicePanel2
      */
@@ -108,18 +109,40 @@ public class DicePanel extends javax.swing.JPanel {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         String dice = diceField.getText();
         Formula f = new Formula(dice);
+
+        int diceValue = 0;
+        boolean hasDice=false;
+        try {
+            if (dice.contains("d")) {
+                String[] fields = dice.split("d");
+                int i = 0;
+                String dValue = "";
+                while (Character.isDigit(fields[1].charAt(i))) {
+                    dValue += fields[1].charAt(i);
+                    i++;
+                }
+
+                diceValue = Integer.parseInt(dValue);
+                hasDice=true;
+            }
+        } catch (Exception ex) {
+            //
+        }
         
-        String[] fields = dice.split("d");
-        int diceQuantity = Integer.parseInt(fields[0]);
-        int diceValue = Integer.parseInt(fields[1]);
-        int val = Formula.getDice(diceQuantity, diceValue);
+        int val = f.getValue(g.getModifier("STR"), g.getModifier("DEX"),
+                g.getModifier("CON"), g.getModifier("INT"), g.getModifier("WIS"),
+                g.getModifier("CHA"), g.getModifier("PROF"));
         if (hasAdvantage.isSelected()) {
-            int val2 = Formula.getDice(diceQuantity, diceValue);
+            int val2 = f.getValue(g.getModifier("STR"), g.getModifier("DEX"),
+                    g.getModifier("CON"), g.getModifier("INT"), g.getModifier("WIS"),
+                    g.getModifier("CHA"), g.getModifier("PROF"));
             if (val2 > val) {
                 val = val2;
             }
         } else if (hasDisadvantage.isSelected()) {
-            int val2 = Formula.getDice(diceQuantity, diceValue);
+            int val2 = f.getValue(g.getModifier("STR"), g.getModifier("DEX"),
+                    g.getModifier("CON"), g.getModifier("INT"), g.getModifier("WIS"),
+                    g.getModifier("CHA"), g.getModifier("PROF"));
             if (val2 < val) {
                 val = val2;
             }
@@ -127,15 +150,15 @@ public class DicePanel extends javax.swing.JPanel {
         jLabel41.setText("" + val);
         hasAdvantage.setSelected(false);
         hasDisadvantage.setSelected(false);
-        gui.updatePassiveWisdom();
+        g.updatePassiveWisdom();
 
-        if (gui.online != null) {
-            if (val == 1) {
-                gui.online.print(" rolled a " + diceField.getText() + " for " + val + ". CRITICAL FAIL");
-            } else if (val == diceValue) {
-                gui.online.print(" rolled a " + diceField.getText() + " for " + val + ". CRITICAL SUCCESS");
+        if (g.online != null) {
+            if (val == 1 && hasDice) {
+                g.online.print(" rolled a " + diceField.getText() + " for " + val + ". CRITICAL FAIL");
+            } else if (val == diceValue && hasDice) {
+                g.online.print(" rolled a " + diceField.getText() + " for " + val + ". CRITICAL SUCCESS");
             } else {
-                gui.online.print(" rolled a " + diceField.getText() + " for " + val);
+                g.online.print(" rolled a " + diceField.getText() + " for " + val);
             }
         }
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -145,7 +168,7 @@ public class DicePanel extends javax.swing.JPanel {
         if (hasAdvantage.isSelected()) {
             hasDisadvantage.setSelected(false);
         }
-        gui.updatePassiveWisdom();
+        g.updatePassiveWisdom();
     }//GEN-LAST:event_hasAdvantageActionPerformed
 
     private void hasDisadvantageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hasDisadvantageActionPerformed
@@ -153,7 +176,7 @@ public class DicePanel extends javax.swing.JPanel {
         if (hasDisadvantage.isSelected()) {
             hasAdvantage.setSelected(false);
         }
-        gui.updatePassiveWisdom();
+        g.updatePassiveWisdom();
     }//GEN-LAST:event_hasDisadvantageActionPerformed
 
     private void diceFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_diceFieldActionPerformed

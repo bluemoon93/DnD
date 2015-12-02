@@ -20,46 +20,46 @@ import javax.swing.JFileChooser;
  */
 public class FileIO {
     public static void formatTextBoxes(Gui g){
-        if (g.strScore.getText().equals("")) {
-            g.strScore.setText(" ");
+        if (g.attributesPanel1.strScore.getText().equals("")) {
+            g.attributesPanel1.strScore.setText(" ");
         }
-        if (g.dexScore.getText().equals("")) {
-            g.dexScore.setText(" ");
+        if (g.attributesPanel1.dexScore.getText().equals("")) {
+            g.attributesPanel1.dexScore.setText(" ");
         }
-        if (g.conScore.getText().equals("")) {
-            g.conScore.setText(" ");
+        if (g.attributesPanel1.conScore.getText().equals("")) {
+            g.attributesPanel1.conScore.setText(" ");
         }
-        if (g.intScore.getText().equals("")) {
-            g.intScore.setText(" ");
+        if (g.attributesPanel1.intScore.getText().equals("")) {
+            g.attributesPanel1.intScore.setText(" ");
         }
-        if (g.wisScore.getText().equals("")) {
-            g.wisScore.setText(" ");
+        if (g.attributesPanel1.wisScore.getText().equals("")) {
+            g.attributesPanel1.wisScore.setText(" ");
         }
-        if (g.chaScore.getText().equals("")) {
-            g.chaScore.setText(" ");
-        }
-
-        if (g.speedScore.getText().equals("")) {
-            g.speedScore.setText(" ");
-        }
-        if (g.hitDiceNumber.getText().equals("")) {
-            g.hitDiceNumber.setText(" ");
-        }
-        if (g.currHpScore.getText().equals("")) {
-            g.currHpScore.setText(" ");
+        if (g.attributesPanel1.chaScore.getText().equals("")) {
+            g.attributesPanel1.chaScore.setText(" ");
         }
 
-        if (g.raceClass.getText().equals("")) {
-            g.raceClass.setText(" ");
+        if (g.aCPanel1.speedScore.getText().equals("")) {
+            g.aCPanel1.speedScore.setText(" ");
         }
-        if (g.xpScore.getText().equals("")) {
-            g.xpScore.setText(" ");
+        if (g.hPPanel1.hitDiceNumber.getText().equals("")) {
+            g.hPPanel1.hitDiceNumber.setText(" ");
         }
-        if (g.alignment.getText().equals("")) {
-            g.alignment.setText(" ");
+        if (g.hPPanel1.currHpScore.getText().equals("")) {
+            g.hPPanel1.currHpScore.setText(" ");
         }
-        if (g.charName.getText().equals("")) {
-            g.charName.setText(" ");
+
+        if (g.namePanel1.raceClass.getText().equals("")) {
+            g.namePanel1.raceClass.setText(" ");
+        }
+        if (g.namePanel1.xpScore.getText().equals("")) {
+            g.namePanel1.xpScore.setText(" ");
+        }
+        if (g.namePanel1.alignment.getText().equals("")) {
+            g.namePanel1.alignment.setText(" ");
+        }
+        if (g.namePanel1.charName.getText().equals("")) {
+            g.namePanel1.charName.setText(" ");
         }
 
         if (g.jTextField7.getText().equals("")) {
@@ -124,12 +124,12 @@ public class FileIO {
             try {
                 Scanner fin = new Scanner(a);
 
-                g.strScore.setText(fin.nextLine().split("=")[1]);
-                g.dexScore.setText(fin.nextLine().split("=")[1]);
-                g.conScore.setText(fin.nextLine().split("=")[1]);
-                g.intScore.setText(fin.nextLine().split("=")[1]);
-                g.wisScore.setText(fin.nextLine().split("=")[1]);
-                g.chaScore.setText(fin.nextLine().split("=")[1]);
+                g.attributesPanel1.strScore.setText(fin.nextLine().split("=")[1]);
+                g.attributesPanel1.dexScore.setText(fin.nextLine().split("=")[1]);
+                g.attributesPanel1.conScore.setText(fin.nextLine().split("=")[1]);
+                g.attributesPanel1.intScore.setText(fin.nextLine().split("=")[1]);
+                g.attributesPanel1.wisScore.setText(fin.nextLine().split("=")[1]);
+                g.attributesPanel1.chaScore.setText(fin.nextLine().split("=")[1]);
                 /*g.strScoreActionPerformed(null);
                 g.dexScoreActionPerformed(null);
                 g.conScoreActionPerformed(null);
@@ -137,12 +137,12 @@ public class FileIO {
                 g.wisScoreActionPerformed(null);
                 g.chaScoreActionPerformed(null);*/
 
-                g.jRadioButton1.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
-                g.jRadioButton2.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
-                g.jRadioButton3.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
-                g.jRadioButton4.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
-                g.jRadioButton5.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
-                g.jRadioButton6.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
+                g.sTPanel1.jRadioButton1.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
+                g.sTPanel1.jRadioButton2.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
+                g.sTPanel1.jRadioButton3.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
+                g.sTPanel1.jRadioButton4.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
+                g.sTPanel1.jRadioButton5.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
+                g.sTPanel1.jRadioButton6.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
                 /*g.stActionListener(g.jRadioButton1, g.strST, "STR");
                 g.stActionListener(g.jRadioButton2, g.dexST, "DEX");
                 g.stActionListener(g.jRadioButton3, g.conST, "CON");
@@ -152,36 +152,36 @@ public class FileIO {
                 
 
                 g.acFormula = new Formula(fin.nextLine().split("=")[1]);
-                g.speedScore.setText(fin.nextLine().split("=")[1]);
-                g.hitDiceNumber.setText(fin.nextLine().split("=")[1]);
-                g.currHpScore.setText(fin.nextLine().split("=")[1]);
-                g.acScore.setText("" + g.acFormula.getValue(g.getModifier("STR"), g.getModifier("DEX"), g.getModifier("CON"),
+                g.aCPanel1.speedScore.setText(fin.nextLine().split("=")[1]);
+                g.hPPanel1.hitDiceNumber.setText(fin.nextLine().split("=")[1]);
+                g.hPPanel1.currHpScore.setText(fin.nextLine().split("=")[1]);
+                g.aCPanel1.acScore.setText("" + g.acFormula.getValue(g.getModifier("STR"), g.getModifier("DEX"), g.getModifier("CON"),
                         g.getModifier("INT"), g.getModifier("WIS"), g.getModifier("CHA"), g.getModifier("PROF")));
                 
                 //jTextField10ActionPerformed(null);
                 //g.hitDiceNumberActionPerformed(null);
                 //g.currHpScoreActionPerformed(null);
-                g.hitDiceML.update();
-                g.currHpML.update();
+                g.hPPanel1.hitDiceML.update();
+                g.hPPanel1.currHpML.update();
 
-                g.jRadioButton11.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
-                g.jRadioButton25.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
-                g.jRadioButton10.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
-                g.jRadioButton8.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
-                g.jRadioButton12.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
-                g.jRadioButton14.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
-                g.jRadioButton15.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
-                g.jRadioButton13.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
-                g.jRadioButton16.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
-                g.jRadioButton17.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
-                g.jRadioButton9.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
-                g.jRadioButton18.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
-                g.jRadioButton19.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
-                g.jRadioButton20.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
-                g.jRadioButton21.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
-                g.jRadioButton22.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
-                g.jRadioButton23.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
-                g.jRadioButton24.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
+                g.skillsPanel1.jRadioButton11.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
+                g.skillsPanel1.jRadioButton25.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
+                g.skillsPanel1.jRadioButton10.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
+                g.skillsPanel1.jRadioButton8.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
+                g.skillsPanel1.jRadioButton12.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
+                g.skillsPanel1.jRadioButton14.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
+                g.skillsPanel1.jRadioButton15.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
+                g.skillsPanel1.jRadioButton13.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
+                g.skillsPanel1.jRadioButton16.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
+                g.skillsPanel1.jRadioButton17.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
+                g.skillsPanel1.jRadioButton9.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
+                g.skillsPanel1.jRadioButton18.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
+                g.skillsPanel1.jRadioButton19.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
+                g.skillsPanel1.jRadioButton20.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
+                g.skillsPanel1.jRadioButton21.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
+                g.skillsPanel1.jRadioButton22.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
+                g.skillsPanel1.jRadioButton23.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
+                g.skillsPanel1.jRadioButton24.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
                 /*g.jRadioButton11ActionPerformed(null);
                 g.jRadioButton25ActionPerformed(null);
                 g.jRadioButton10ActionPerformed(null);
@@ -201,13 +201,13 @@ public class FileIO {
                 g.jRadioButton23ActionPerformed(null);
                 g.jRadioButton24ActionPerformed(null);*/
 
-                g.raceClass.setText(fin.nextLine().split("=")[1]);
-                g.xpScore.setText(fin.nextLine().split("=")[1]);
-                g.alignment.setText(fin.nextLine().split("=")[1]);
-                g.charName.setText(fin.nextLine().split("=")[1]);
+                g.namePanel1.raceClass.setText(fin.nextLine().split("=")[1]);
+                g.namePanel1.xpScore.setText(fin.nextLine().split("=")[1]);
+                g.namePanel1.alignment.setText(fin.nextLine().split("=")[1]);
+                g.namePanel1.charName.setText(fin.nextLine().split("=")[1]);
                 //jTextField12ActionPerformed(null);
                 //g.xpScoreActionPerformed(null);
-                g.xpML.update();
+                g.namePanel1.xpML.update();
                 //jTextField14ActionPerformed(null);
                 //jTextField15ActionPerformed(null);
 
@@ -246,7 +246,7 @@ public class FileIO {
                     temp = fin.nextLine();
                 }
                 person += temp.substring(0, temp.length() - 1);
-                g.personality.setText(person);
+                g.textPanel1.personality.setText(person);
 
                 String ideals = "";
                 temp = fin.nextLine().split("=")[1].substring(1);
@@ -255,7 +255,7 @@ public class FileIO {
                     temp = fin.nextLine();
                 }
                 ideals += temp.substring(0, temp.length() - 1);
-                g.idealsBonds.setText(ideals);
+                g.textPanel1.idealsBonds.setText(ideals);
 
                 String flaws2 = "";
                 temp = fin.nextLine().split("=")[1].substring(1);
@@ -264,7 +264,7 @@ public class FileIO {
                     temp = fin.nextLine();
                 }
                 flaws2 += temp.substring(0, temp.length() - 1);
-                g.flaws.setText(flaws2);
+                g.textPanel1.flaws.setText(flaws2);
 
                 String equips = "";
                 temp = fin.nextLine().split("=")[1].substring(1);
@@ -273,7 +273,7 @@ public class FileIO {
                     temp = fin.nextLine();
                 }
                 equips += temp.substring(0, temp.length() - 1);
-                g.equipsGold.setText(equips);
+                g.textPanel1.equipsGold.setText(equips);
 
                 String features = "";
                 temp = fin.nextLine().split("=")[1].substring(1);
@@ -282,7 +282,7 @@ public class FileIO {
                     temp = fin.nextLine();
                 }
                 features += temp.substring(0, temp.length() - 1);
-                g.featuresTraits.setText(features);
+                g.textPanel1.featuresTraits.setText(features);
 
                 String profs = "";
                 temp = fin.nextLine().split("=")[1].substring(1);
@@ -291,7 +291,7 @@ public class FileIO {
                     temp = fin.nextLine();
                 }
                 profs += temp.substring(0, temp.length() - 1);
-                g.profsLanguages.setText(profs);
+                g.textPanel1.profsLanguages.setText(profs);
 
                 fin.close();
             } catch (FileNotFoundException ex) {
@@ -309,48 +309,48 @@ public class FileIO {
             File a = saveFile.getSelectedFile();
             try {
                 try (PrintWriter out = new PrintWriter(a)) {
-                    out.println("str=" + g.strScore.getText());
-                    out.println("dex=" + g.dexScore.getText());
-                    out.println("con=" + g.conScore.getText());
-                    out.println("int=" + g.intScore.getText());
-                    out.println("wis=" + g.wisScore.getText());
-                    out.println("cha=" + g.chaScore.getText());
+                    out.println("str=" + g.attributesPanel1.strScore.getText());
+                    out.println("dex=" + g.attributesPanel1.dexScore.getText());
+                    out.println("con=" + g.attributesPanel1.conScore.getText());
+                    out.println("int=" + g.attributesPanel1.intScore.getText());
+                    out.println("wis=" + g.attributesPanel1.wisScore.getText());
+                    out.println("cha=" + g.attributesPanel1.chaScore.getText());
 
-                    out.println("STstr=" + g.jRadioButton1.isSelected());
-                    out.println("STdex=" + g.jRadioButton2.isSelected());
-                    out.println("STcon=" + g.jRadioButton3.isSelected());
-                    out.println("STint=" + g.jRadioButton4.isSelected());
-                    out.println("STwis=" + g.jRadioButton5.isSelected());
-                    out.println("STcha=" + g.jRadioButton6.isSelected());
+                    out.println("STstr=" + g.sTPanel1.jRadioButton1.isSelected());
+                    out.println("STdex=" + g.sTPanel1.jRadioButton2.isSelected());
+                    out.println("STcon=" + g.sTPanel1.jRadioButton3.isSelected());
+                    out.println("STint=" + g.sTPanel1.jRadioButton4.isSelected());
+                    out.println("STwis=" + g.sTPanel1.jRadioButton5.isSelected());
+                    out.println("STcha=" + g.sTPanel1.jRadioButton6.isSelected());
 
                     out.println("ac=" + g.acFormula.form);
-                    out.println("speed=" + g.speedScore.getText());
-                    out.println("diceN=" + g.hitDiceNumber.getText());
-                    out.println("hp=" + g.currHpScore.getText());
+                    out.println("speed=" + g.aCPanel1.speedScore.getText());
+                    out.println("diceN=" + g.hPPanel1.hitDiceNumber.getText());
+                    out.println("hp=" + g.hPPanel1.currHpScore.getText());
 
-                    out.println("acr=" + g.jRadioButton11.isSelected());
-                    out.println("ah=" + g.jRadioButton25.isSelected());
-                    out.println("arcana=" + g.jRadioButton10.isSelected());
-                    out.println("athl=" + g.jRadioButton8.isSelected());
-                    out.println("decep=" + g.jRadioButton12.isSelected());
-                    out.println("histo=" + g.jRadioButton14.isSelected());
-                    out.println("insigh=" + g.jRadioButton15.isSelected());
-                    out.println("intim=" + g.jRadioButton13.isSelected());
-                    out.println("inves=" + g.jRadioButton16.isSelected());
-                    out.println("medic=" + g.jRadioButton17.isSelected());
-                    out.println("nature=" + g.jRadioButton9.isSelected());
-                    out.println("perce=" + g.jRadioButton18.isSelected());
-                    out.println("perf=" + g.jRadioButton19.isSelected());
-                    out.println("persu=" + g.jRadioButton20.isSelected());
-                    out.println("relig=" + g.jRadioButton21.isSelected());
-                    out.println("SoH=" + g.jRadioButton22.isSelected());
-                    out.println("stealth=" + g.jRadioButton23.isSelected());
-                    out.println("survi=" + g.jRadioButton24.isSelected());
+                    out.println("acr=" + g.skillsPanel1.jRadioButton11.isSelected());
+                    out.println("ah=" + g.skillsPanel1.jRadioButton25.isSelected());
+                    out.println("arcana=" + g.skillsPanel1.jRadioButton10.isSelected());
+                    out.println("athl=" + g.skillsPanel1.jRadioButton8.isSelected());
+                    out.println("decep=" + g.skillsPanel1.jRadioButton12.isSelected());
+                    out.println("histo=" + g.skillsPanel1.jRadioButton14.isSelected());
+                    out.println("insigh=" + g.skillsPanel1.jRadioButton15.isSelected());
+                    out.println("intim=" + g.skillsPanel1.jRadioButton13.isSelected());
+                    out.println("inves=" + g.skillsPanel1.jRadioButton16.isSelected());
+                    out.println("medic=" + g.skillsPanel1.jRadioButton17.isSelected());
+                    out.println("nature=" + g.skillsPanel1.jRadioButton9.isSelected());
+                    out.println("perce=" + g.skillsPanel1.jRadioButton18.isSelected());
+                    out.println("perf=" + g.skillsPanel1.jRadioButton19.isSelected());
+                    out.println("persu=" + g.skillsPanel1.jRadioButton20.isSelected());
+                    out.println("relig=" + g.skillsPanel1.jRadioButton21.isSelected());
+                    out.println("SoH=" + g.skillsPanel1.jRadioButton22.isSelected());
+                    out.println("stealth=" + g.skillsPanel1.jRadioButton23.isSelected());
+                    out.println("survi=" + g.skillsPanel1.jRadioButton24.isSelected());
 
-                    out.println("raceclass=" + g.raceClass.getText());
-                    out.println("xp=" + g.xpScore.getText());
-                    out.println("align=" + g.alignment.getText());
-                    out.println("name=" + g.charName.getText());
+                    out.println("raceclass=" + g.namePanel1.raceClass.getText());
+                    out.println("xp=" + g.namePanel1.xpScore.getText());
+                    out.println("align=" + g.namePanel1.alignment.getText());
+                    out.println("name=" + g.namePanel1.charName.getText());
 
                     out.println("wep1name=" + g.jTextField7.getText());
                     out.println("wep1Amod=" + g.jTextField9.getText());
@@ -380,12 +380,12 @@ public class FileIO {
                     out.println("wep4Wtype=" + g.jCheckBox10.getText());
                     out.println("wep4prof=" + g.jCheckBox11.isSelected());
 
-                    out.println("person=<" + g.personality.getText().replaceAll("<", "").replaceAll(">", "") + ">");
-                    out.println("ideals=<" + g.idealsBonds.getText().replaceAll("<", "").replaceAll(">", "") + ">");
-                    out.println("flaws=<" + g.flaws.getText().replaceAll("<", "").replaceAll(">", "") + ">");
-                    out.println("equipsGold=<" + g.equipsGold.getText().replaceAll("<", "").replaceAll(">", "") + ">");
-                    out.println("featuresTraits=<" + g.featuresTraits.getText().replaceAll("<", "").replaceAll(">", "") + ">");
-                    out.println("profsLangs=<" + g.profsLanguages.getText().replaceAll("<", "").replaceAll(">", "") + ">");
+                    out.println("person=<" + g.textPanel1.personality.getText().replaceAll("<", "").replaceAll(">", "") + ">");
+                    out.println("ideals=<" + g.textPanel1.idealsBonds.getText().replaceAll("<", "").replaceAll(">", "") + ">");
+                    out.println("flaws=<" + g.textPanel1.flaws.getText().replaceAll("<", "").replaceAll(">", "") + ">");
+                    out.println("equipsGold=<" + g.textPanel1.equipsGold.getText().replaceAll("<", "").replaceAll(">", "") + ">");
+                    out.println("featuresTraits=<" + g.textPanel1.featuresTraits.getText().replaceAll("<", "").replaceAll(">", "") + ">");
+                    out.println("profsLangs=<" + g.textPanel1.profsLanguages.getText().replaceAll("<", "").replaceAll(">", "") + ">");
                 }
             } catch (FileNotFoundException ex) {
                 Logger.getLogger(Gui.class.getName()).log(Level.SEVERE, null, ex);

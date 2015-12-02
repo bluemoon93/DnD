@@ -58,50 +58,37 @@ public class AttributeListener implements DocumentListener {
 
         switch (attribute) {
             case "STR":
-                g.stActionListener(g.jRadioButton1, g.strST, "STR");
+                g.sTPanel1.stActionListener(g.sTPanel1.jRadioButton1, g.sTPanel1.strST, "STR");
 
-                g.skillActionListener(g.jRadioButton8, g.athleticsCheckMod, "STR");
+                g.skillsPanel1.updateStrSkills();
                 break;
             case "DEX":
-                g.stActionListener(g.jRadioButton2, g.dexST, "DEX");
+                g.sTPanel1.stActionListener(g.sTPanel1.jRadioButton2, g.sTPanel1.dexST, "DEX");
 
-                g.skillActionListener(g.jRadioButton11, g.acrobaticsCheckMod, "DEX");
-                g.skillActionListener(g.jRadioButton22, g.sleightHandCheckMod, "DEX");
-                g.skillActionListener(g.jRadioButton23, g.stealthCheckMod, "DEX");
+                g.skillsPanel1.updateDexSkills();
                 break;
             case "CON":
-                g.stActionListener(g.jRadioButton3, g.conST, "CON");
+                g.sTPanel1.stActionListener(g.sTPanel1.jRadioButton3, g.sTPanel1.conST, "CON");
                 
                 //g.hitDiceNumberActionPerformed(null);
-                g.hitDiceML.update();
+                g.hPPanel1.hitDiceML.update();
                 break;
             case "INT":
-                g.stActionListener(g.jRadioButton4, g.intST, "INT");
+                g.sTPanel1.stActionListener(g.sTPanel1.jRadioButton4, g.sTPanel1.intST, "INT");
 
-                g.skillActionListener(g.jRadioButton21, g.religionCheckMod, "INT");
-                g.skillActionListener(g.jRadioButton10, g.arcanaCheckMod, "INT");
-                g.skillActionListener(g.jRadioButton14, g.historyCheckMod, "INT");
-                g.skillActionListener(g.jRadioButton16, g.investigationCheckMod, "INT");
-                g.skillActionListener(g.jRadioButton9, g.natureCheckMod, "INT");
+                g.skillsPanel1.updateIntSkills();
                 break;
             case "WIS":
-                g.stActionListener(g.jRadioButton5, g.wisST, "WIS");
+                g.sTPanel1.stActionListener(g.sTPanel1.jRadioButton5, g.sTPanel1.wisST, "WIS");
 
-                g.skillActionListener(g.jRadioButton25, g.animalCheckMod, "WIS");
-                g.skillActionListener(g.jRadioButton15, g.insightCheckMod, "WIS");
-                g.skillActionListener(g.jRadioButton17, g.medicineCheckMod, "WIS");
-                g.skillActionListener(g.jRadioButton18, g.perceptionCheckMod, "WIS");
-                g.skillActionListener(g.jRadioButton24, g.survivalCheckMod, "WIS");
+                g.skillsPanel1.updateWisSkills();
                 
                 g.updatePassiveWisdom();
                 break;
             case "CHA":
-                g.stActionListener(g.jRadioButton6, g.chaST, "CHA");
+                g.sTPanel1.stActionListener(g.sTPanel1.jRadioButton6, g.sTPanel1.chaST, "CHA");
 
-                g.skillActionListener(g.jRadioButton12, g.deceptionCheckMod, "CHA");
-                g.skillActionListener(g.jRadioButton13, g.intimidationCheckMod, "CHA");
-                g.skillActionListener(g.jRadioButton19, g.performanceCheckMod, "CHA");
-                g.skillActionListener(g.jRadioButton20, g.persuasionCheckMod, "CHA");
+                g.skillsPanel1.updateChaSkills();
                 break;
             default:
                 System.out.println("Trying to update "+attribute);
