@@ -16,13 +16,35 @@ import javax.swing.event.DocumentListener;
  * @author BlueMoon
  */
 public class SkillsConfigFrame extends javax.swing.JFrame {
-
+    Formula [] forms;
+    SkillsPanel sp;
     /**
      * Creates new form SkillsConfigFrame
      */
-    public SkillsConfigFrame(Formula[] forms, int str, int dex, int con, int intl, int wis, int cha, int prof) {
+    public SkillsConfigFrame(SkillsPanel sp, int str, int dex, int con, int intl, int wis, int cha, int prof) {
         initComponents();
-
+        this.sp=sp;
+        this.forms=sp.forms;
+        
+        jRadioButton11.setSelected(sp.jRadioButton11.isSelected());
+        jRadioButton25.setSelected(sp.jRadioButton25.isSelected());
+        jRadioButton10.setSelected(sp.jRadioButton10.isSelected());
+        jRadioButton8.setSelected(sp.jRadioButton8.isSelected());
+        jRadioButton12.setSelected(sp.jRadioButton12.isSelected());
+        jRadioButton14.setSelected(sp.jRadioButton14.isSelected());
+        jRadioButton15.setSelected(sp.jRadioButton15.isSelected());
+        jRadioButton13.setSelected(sp.jRadioButton13.isSelected());
+        jRadioButton16.setSelected(sp.jRadioButton16.isSelected());
+        jRadioButton17.setSelected(sp.jRadioButton17.isSelected());
+        jRadioButton8.setSelected(sp.jRadioButton8.isSelected());
+        jRadioButton18.setSelected(sp.jRadioButton18.isSelected());
+        jRadioButton19.setSelected(sp.jRadioButton19.isSelected());
+        jRadioButton20.setSelected(sp.jRadioButton20.isSelected());
+        jRadioButton21.setSelected(sp.jRadioButton21.isSelected());
+        jRadioButton22.setSelected(sp.jRadioButton22.isSelected());
+        jRadioButton23.setSelected(sp.jRadioButton23.isSelected());
+        jRadioButton24.setSelected(sp.jRadioButton24.isSelected());
+        
         jTextField1.getDocument().addDocumentListener(new skillListener(jTextField1, acrobaticsCheckMod, str, dex, con, intl, wis, cha, prof));
         jTextField2.getDocument().addDocumentListener(new skillListener(jTextField2, animalCheckMod, str, dex, con, intl, wis, cha, prof));
         jTextField3.getDocument().addDocumentListener(new skillListener(jTextField3, arcanaCheckMod, str, dex, con, intl, wis, cha, prof));
@@ -171,9 +193,11 @@ public class SkillsConfigFrame extends javax.swing.JFrame {
 
         jRadioButton14.setText("History");
         jRadioButton14.setToolTipText("Ability to recall lore about historical events");
+        jRadioButton14.setEnabled(false);
 
         jRadioButton15.setText("Insight");
         jRadioButton15.setToolTipText("Determine the true intentions of a creature");
+        jRadioButton15.setEnabled(false);
 
         investigationCheckMod.setText("0");
 
@@ -191,40 +215,51 @@ public class SkillsConfigFrame extends javax.swing.JFrame {
 
         jRadioButton13.setText("Intimidation");
         jRadioButton13.setToolTipText("Influence someone through threats, hostile actions, and physical violence");
+        jRadioButton13.setEnabled(false);
 
         animalCheckMod.setText("0");
 
         jRadioButton16.setText("Investigation");
         jRadioButton16.setToolTipText("Look around for clues and make deductions based on those clues");
+        jRadioButton16.setEnabled(false);
 
         acrobaticsCheckMod.setText("0");
 
         jRadioButton17.setText("Medicine");
         jRadioButton17.setToolTipText("Try to stabilize a dying companion or diagnose an illness.");
+        jRadioButton17.setEnabled(false);
 
         jRadioButton9.setText("Nature");
         jRadioButton9.setToolTipText("Recall lore about terrain, plants and animals");
+        jRadioButton9.setEnabled(false);
 
         jRadioButton18.setText("Perception");
         jRadioButton18.setToolTipText("Spot, hear, or otherwise detect the presence of something.");
+        jRadioButton18.setEnabled(false);
 
         jRadioButton19.setText("Performance");
         jRadioButton19.setToolTipText("Delight an audience with music, dance, acting");
+        jRadioButton19.setEnabled(false);
 
         jRadioButton20.setText("Persuasion");
         jRadioButton20.setToolTipText("Influence someone with tact, social graces, or good nature");
+        jRadioButton20.setEnabled(false);
 
         jRadioButton21.setText("Religion");
         jRadioButton21.setToolTipText("Recall lore about deities, rites and prayers");
+        jRadioButton21.setEnabled(false);
 
         jRadioButton22.setText("Sleight of Hand");
         jRadioButton22.setToolTipText("Planting/taking something on someone else or concealing an object.");
+        jRadioButton22.setEnabled(false);
 
         jRadioButton23.setText("Stealth");
         jRadioButton23.setToolTipText("Conceal yourself from enemies");
+        jRadioButton23.setEnabled(false);
 
         jRadioButton24.setText("Survival");
         jRadioButton24.setToolTipText("Follow tracks, hunt wild game, guide your group");
+        jRadioButton24.setEnabled(false);
 
         survivalCheckMod.setText("0");
 
@@ -246,18 +281,23 @@ public class SkillsConfigFrame extends javax.swing.JFrame {
 
         jRadioButton11.setText("Acrobatics");
         jRadioButton11.setToolTipText("Stay on your feet in a tricky situation.");
+        jRadioButton11.setEnabled(false);
 
         jRadioButton25.setText("Animal Handling");
         jRadioButton25.setToolTipText("Handle animals");
+        jRadioButton25.setEnabled(false);
 
         jRadioButton10.setText("Arcana");
         jRadioButton10.setToolTipText("Ability to recall lore about spells, magic items");
+        jRadioButton10.setEnabled(false);
 
         jRadioButton8.setText("Athletics");
         jRadioButton8.setToolTipText("Climbing, jumping, or swimming");
+        jRadioButton8.setEnabled(false);
 
         jRadioButton12.setText("Deception");
         jRadioButton12.setToolTipText("Hide the truth, either verbally or through your actions");
+        jRadioButton12.setEnabled(false);
 
         jTextField1.setText("DEX");
 
@@ -508,6 +548,31 @@ public class SkillsConfigFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        forms[0].form=jTextField1.getText();
+        forms[1].form=jTextField2.getText();
+        forms[2].form=jTextField3.getText();
+        forms[3].form=jTextField4.getText();
+        forms[4].form=jTextField5.getText();
+        forms[5].form=jTextField6.getText();
+        forms[6].form=jTextField7.getText();
+        forms[7].form=jTextField8.getText();
+        forms[8].form=jTextField9.getText();
+        forms[9].form=jTextField10.getText();
+        forms[10].form=jTextField11.getText();
+        forms[11].form=jTextField12.getText();
+        forms[12].form=jTextField13.getText();
+        forms[13].form=jTextField14.getText();
+        forms[14].form=jTextField15.getText();
+        forms[15].form=jTextField16.getText();
+        forms[16].form=jTextField17.getText();
+        forms[17].form=jTextField18.getText();
+        
+        sp.updateChaSkills();
+        sp.updateDexSkills();
+        sp.updateStrSkills();
+        sp.updateIntSkills();
+        sp.updateWisSkills();
+        
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 

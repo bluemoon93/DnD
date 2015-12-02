@@ -22,6 +22,10 @@ public class DicePanel extends javax.swing.JPanel {
         initComponents();
         //this.gui=gui;
     }
+    
+    public void setListeners(Gui g){
+        this.g=g;
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.

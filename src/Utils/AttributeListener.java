@@ -77,6 +77,7 @@ public class AttributeListener implements DocumentListener {
                 g.sTPanel1.stActionListener(g.sTPanel1.jRadioButton4, g.sTPanel1.intST, "INT");
 
                 g.skillsPanel1.updateIntSkills();
+                g.spellStats1.updateSpellVars();
                 break;
             case "WIS":
                 g.sTPanel1.stActionListener(g.sTPanel1.jRadioButton5, g.sTPanel1.wisST, "WIS");
@@ -84,11 +85,13 @@ public class AttributeListener implements DocumentListener {
                 g.skillsPanel1.updateWisSkills();
                 
                 g.updatePassiveWisdom();
+                g.spellStats1.updateSpellVars();
                 break;
             case "CHA":
                 g.sTPanel1.stActionListener(g.sTPanel1.jRadioButton6, g.sTPanel1.chaST, "CHA");
 
                 g.skillsPanel1.updateChaSkills();
+                g.spellStats1.updateSpellVars();
                 break;
             default:
                 System.out.println("Trying to update "+attribute);

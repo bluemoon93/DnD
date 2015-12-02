@@ -271,6 +271,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="History"/>
         <Property name="toolTipText" type="java.lang.String" value="Ability to recall lore about historical events"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -280,6 +281,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Insight"/>
         <Property name="toolTipText" type="java.lang.String" value="Determine the true intentions of a creature"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -345,6 +347,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Intimidation"/>
         <Property name="toolTipText" type="java.lang.String" value="Influence someone through threats, hostile actions, and physical violence"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -362,6 +365,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Investigation"/>
         <Property name="toolTipText" type="java.lang.String" value="Look around for clues and make deductions based on those clues"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -379,6 +383,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Medicine"/>
         <Property name="toolTipText" type="java.lang.String" value="Try to stabilize a dying companion or diagnose an illness."/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -388,6 +393,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Nature"/>
         <Property name="toolTipText" type="java.lang.String" value="Recall lore about terrain, plants and animals"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -397,6 +403,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Perception"/>
         <Property name="toolTipText" type="java.lang.String" value="Spot, hear, or otherwise detect the presence of something."/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -406,6 +413,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Performance"/>
         <Property name="toolTipText" type="java.lang.String" value="Delight an audience with music, dance, acting"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -415,6 +423,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Persuasion"/>
         <Property name="toolTipText" type="java.lang.String" value="Influence someone with tact, social graces, or good nature"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -424,6 +433,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Religion"/>
         <Property name="toolTipText" type="java.lang.String" value="Recall lore about deities, rites and prayers"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -433,6 +443,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Sleight of Hand"/>
         <Property name="toolTipText" type="java.lang.String" value="Planting/taking something on someone else or concealing an object."/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -442,6 +453,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Stealth"/>
         <Property name="toolTipText" type="java.lang.String" value="Conceal yourself from enemies"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -451,6 +463,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Survival"/>
         <Property name="toolTipText" type="java.lang.String" value="Follow tracks, hunt wild game, guide your group"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -532,6 +545,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Acrobatics"/>
         <Property name="toolTipText" type="java.lang.String" value="Stay on your feet in a tricky situation."/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -541,6 +555,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Animal Handling"/>
         <Property name="toolTipText" type="java.lang.String" value="Handle animals"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -550,6 +565,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Arcana"/>
         <Property name="toolTipText" type="java.lang.String" value="Ability to recall lore about spells, magic items"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -559,6 +575,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Athletics"/>
         <Property name="toolTipText" type="java.lang.String" value="Climbing, jumping, or swimming"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -568,6 +585,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Deception"/>
         <Property name="toolTipText" type="java.lang.String" value="Hide the truth, either verbally or through your actions"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>

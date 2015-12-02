@@ -16,7 +16,7 @@ import javax.swing.JRadioButton;
 public class SkillsPanel extends javax.swing.JPanel {
 
     Gui g;
-    Formula[] forms = new Formula[18];
+    public Formula[] forms = new Formula[18];
 
     /**
      * Creates new form SkillsPanel
@@ -436,9 +436,10 @@ public class SkillsPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        SkillsPanel t = this;
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                SkillsConfigFrame dialog = new SkillsConfigFrame(forms, g.getModifier("STR"), g.getModifier("DEX"), 
+                SkillsConfigFrame dialog = new SkillsConfigFrame(t, g.getModifier("STR"), g.getModifier("DEX"), 
                         g.getModifier("CON"), g.getModifier("INT"), g.getModifier("WIS"), 
                         g.getModifier("CHA"), g.getModifier("PROF"));
 

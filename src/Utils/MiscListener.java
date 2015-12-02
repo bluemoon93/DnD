@@ -233,6 +233,7 @@ public class MiscListener implements DocumentListener {
 */
         g.updatePassiveWisdom();
         g.hPPanel1.hitDiceML.update();
+        g.spellStats1.updateSpellVars();
         //g.hitDiceNumberActionPerformed(null);
 
     }

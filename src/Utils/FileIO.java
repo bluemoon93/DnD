@@ -164,42 +164,83 @@ public class FileIO {
                 g.hPPanel1.hitDiceML.update();
                 g.hPPanel1.currHpML.update();
 
-                g.skillsPanel1.jRadioButton11.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
-                g.skillsPanel1.jRadioButton25.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
-                g.skillsPanel1.jRadioButton10.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
-                g.skillsPanel1.jRadioButton8.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
-                g.skillsPanel1.jRadioButton12.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
-                g.skillsPanel1.jRadioButton14.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
-                g.skillsPanel1.jRadioButton15.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
-                g.skillsPanel1.jRadioButton13.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
-                g.skillsPanel1.jRadioButton16.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
-                g.skillsPanel1.jRadioButton17.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
-                g.skillsPanel1.jRadioButton9.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
-                g.skillsPanel1.jRadioButton18.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
-                g.skillsPanel1.jRadioButton19.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
-                g.skillsPanel1.jRadioButton20.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
-                g.skillsPanel1.jRadioButton21.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
-                g.skillsPanel1.jRadioButton22.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
-                g.skillsPanel1.jRadioButton23.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
-                g.skillsPanel1.jRadioButton24.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
-                /*g.jRadioButton11ActionPerformed(null);
-                g.jRadioButton25ActionPerformed(null);
-                g.jRadioButton10ActionPerformed(null);
-                g.jRadioButton8ActionPerformed(null);
-                g.jRadioButton12ActionPerformed(null);
-                g.jRadioButton14ActionPerformed(null);
-                g.jRadioButton15ActionPerformed(null);
-                g.jRadioButton13ActionPerformed(null);
-                g.jRadioButton16ActionPerformed(null);
-                g.jRadioButton16ActionPerformed(null);
-                g.jRadioButton9ActionPerformed(null);
-                g.jRadioButton18ActionPerformed(null);
-                g.jRadioButton19ActionPerformed(null);
-                g.jRadioButton20ActionPerformed(null);
-                g.jRadioButton21ActionPerformed(null);
-                g.jRadioButton22ActionPerformed(null);
-                g.jRadioButton23ActionPerformed(null);
-                g.jRadioButton24ActionPerformed(null);*/
+                String [] nextLine = fin.nextLine().split("=");
+                g.skillsPanel1.jRadioButton11.setSelected(Boolean.parseBoolean(nextLine[1]));
+                if(nextLine.length>2) g.skillsPanel1.forms[0].form=nextLine[2];
+                
+                nextLine = fin.nextLine().split("=");
+                g.skillsPanel1.jRadioButton25.setSelected(Boolean.parseBoolean(nextLine[1]));
+                if(nextLine.length>2) g.skillsPanel1.forms[1].form=nextLine[2];
+                
+                nextLine = fin.nextLine().split("=");
+                g.skillsPanel1.jRadioButton10.setSelected(Boolean.parseBoolean(nextLine[1]));
+                if(nextLine.length>2) g.skillsPanel1.forms[2].form=nextLine[2];
+                
+                nextLine = fin.nextLine().split("=");
+                g.skillsPanel1.jRadioButton8.setSelected(Boolean.parseBoolean(nextLine[1]));
+                if(nextLine.length>2) g.skillsPanel1.forms[3].form=nextLine[2];
+                
+                nextLine = fin.nextLine().split("=");
+                g.skillsPanel1.jRadioButton12.setSelected(Boolean.parseBoolean(nextLine[1]));
+                if(nextLine.length>2) g.skillsPanel1.forms[4].form=nextLine[2];
+                
+                nextLine = fin.nextLine().split("=");
+                g.skillsPanel1.jRadioButton14.setSelected(Boolean.parseBoolean(nextLine[1]));
+                if(nextLine.length>2) g.skillsPanel1.forms[5].form=nextLine[2];
+                
+                nextLine = fin.nextLine().split("=");
+                g.skillsPanel1.jRadioButton15.setSelected(Boolean.parseBoolean(nextLine[1]));
+                if(nextLine.length>2) g.skillsPanel1.forms[6].form=nextLine[2];
+                
+                nextLine = fin.nextLine().split("=");
+                g.skillsPanel1.jRadioButton13.setSelected(Boolean.parseBoolean(nextLine[1]));
+                if(nextLine.length>2) g.skillsPanel1.forms[7].form=nextLine[2];
+                
+                nextLine = fin.nextLine().split("=");
+                g.skillsPanel1.jRadioButton16.setSelected(Boolean.parseBoolean(nextLine[1]));
+                if(nextLine.length>2) g.skillsPanel1.forms[8].form=nextLine[2];
+                
+                nextLine = fin.nextLine().split("=");
+                g.skillsPanel1.jRadioButton17.setSelected(Boolean.parseBoolean(nextLine[1]));
+                if(nextLine.length>2) g.skillsPanel1.forms[9].form=nextLine[2];
+                
+                nextLine = fin.nextLine().split("=");
+                g.skillsPanel1.jRadioButton9.setSelected(Boolean.parseBoolean(nextLine[1]));
+                if(nextLine.length>2) g.skillsPanel1.forms[10].form=nextLine[2];
+                
+                nextLine = fin.nextLine().split("=");
+                g.skillsPanel1.jRadioButton18.setSelected(Boolean.parseBoolean(nextLine[1]));
+                if(nextLine.length>2) g.skillsPanel1.forms[11].form=nextLine[2];
+                
+                nextLine = fin.nextLine().split("=");
+                g.skillsPanel1.jRadioButton19.setSelected(Boolean.parseBoolean(nextLine[1]));
+                if(nextLine.length>2) g.skillsPanel1.forms[12].form=nextLine[2];
+                
+                nextLine = fin.nextLine().split("=");
+                g.skillsPanel1.jRadioButton20.setSelected(Boolean.parseBoolean(nextLine[1]));
+                if(nextLine.length>2) g.skillsPanel1.forms[13].form=nextLine[2];
+                
+                nextLine = fin.nextLine().split("=");
+                g.skillsPanel1.jRadioButton21.setSelected(Boolean.parseBoolean(nextLine[1]));
+                if(nextLine.length>2) g.skillsPanel1.forms[14].form=nextLine[2];
+                
+                nextLine = fin.nextLine().split("=");
+                g.skillsPanel1.jRadioButton22.setSelected(Boolean.parseBoolean(nextLine[1]));
+                if(nextLine.length>2) g.skillsPanel1.forms[15].form=nextLine[2];
+                
+                nextLine = fin.nextLine().split("=");
+                g.skillsPanel1.jRadioButton23.setSelected(Boolean.parseBoolean(nextLine[1]));
+                if(nextLine.length>2) g.skillsPanel1.forms[16].form=nextLine[2];
+                
+                nextLine = fin.nextLine().split("=");
+                g.skillsPanel1.jRadioButton24.setSelected(Boolean.parseBoolean(nextLine[1]));
+                if(nextLine.length>2) g.skillsPanel1.forms[17].form=nextLine[2];
+
+                g.skillsPanel1.updateChaSkills();
+                g.skillsPanel1.updateDexSkills();
+                g.skillsPanel1.updateStrSkills();
+                g.skillsPanel1.updateIntSkills();
+                g.skillsPanel1.updateWisSkills();
 
                 g.namePanel1.raceClass.setText(fin.nextLine().split("=")[1]);
                 g.namePanel1.xpScore.setText(fin.nextLine().split("=")[1]);
@@ -328,24 +369,24 @@ public class FileIO {
                     out.println("diceN=" + g.hPPanel1.hitDiceNumber.getText());
                     out.println("hp=" + g.hPPanel1.currHpScore.getText());
 
-                    out.println("acr=" + g.skillsPanel1.jRadioButton11.isSelected());
-                    out.println("ah=" + g.skillsPanel1.jRadioButton25.isSelected());
-                    out.println("arcana=" + g.skillsPanel1.jRadioButton10.isSelected());
-                    out.println("athl=" + g.skillsPanel1.jRadioButton8.isSelected());
-                    out.println("decep=" + g.skillsPanel1.jRadioButton12.isSelected());
-                    out.println("histo=" + g.skillsPanel1.jRadioButton14.isSelected());
-                    out.println("insigh=" + g.skillsPanel1.jRadioButton15.isSelected());
-                    out.println("intim=" + g.skillsPanel1.jRadioButton13.isSelected());
-                    out.println("inves=" + g.skillsPanel1.jRadioButton16.isSelected());
-                    out.println("medic=" + g.skillsPanel1.jRadioButton17.isSelected());
-                    out.println("nature=" + g.skillsPanel1.jRadioButton9.isSelected());
-                    out.println("perce=" + g.skillsPanel1.jRadioButton18.isSelected());
-                    out.println("perf=" + g.skillsPanel1.jRadioButton19.isSelected());
-                    out.println("persu=" + g.skillsPanel1.jRadioButton20.isSelected());
-                    out.println("relig=" + g.skillsPanel1.jRadioButton21.isSelected());
-                    out.println("SoH=" + g.skillsPanel1.jRadioButton22.isSelected());
-                    out.println("stealth=" + g.skillsPanel1.jRadioButton23.isSelected());
-                    out.println("survi=" + g.skillsPanel1.jRadioButton24.isSelected());
+                    out.println("acr=" + g.skillsPanel1.jRadioButton11.isSelected()+"="+g.skillsPanel1.forms[0].form);
+                    out.println("ah=" + g.skillsPanel1.jRadioButton25.isSelected()+"="+g.skillsPanel1.forms[1].form);
+                    out.println("arcana=" + g.skillsPanel1.jRadioButton10.isSelected()+"="+g.skillsPanel1.forms[2].form);
+                    out.println("athl=" + g.skillsPanel1.jRadioButton8.isSelected()+"="+g.skillsPanel1.forms[3].form);
+                    out.println("decep=" + g.skillsPanel1.jRadioButton12.isSelected()+"="+g.skillsPanel1.forms[4].form);
+                    out.println("histo=" + g.skillsPanel1.jRadioButton14.isSelected()+"="+g.skillsPanel1.forms[5].form);
+                    out.println("insigh=" + g.skillsPanel1.jRadioButton15.isSelected()+"="+g.skillsPanel1.forms[6].form);
+                    out.println("intim=" + g.skillsPanel1.jRadioButton13.isSelected()+"="+g.skillsPanel1.forms[7].form);
+                    out.println("inves=" + g.skillsPanel1.jRadioButton16.isSelected()+"="+g.skillsPanel1.forms[8].form);
+                    out.println("medic=" + g.skillsPanel1.jRadioButton17.isSelected()+"="+g.skillsPanel1.forms[9].form);
+                    out.println("nature=" + g.skillsPanel1.jRadioButton9.isSelected()+"="+g.skillsPanel1.forms[10].form);
+                    out.println("perce=" + g.skillsPanel1.jRadioButton18.isSelected()+"="+g.skillsPanel1.forms[11].form);
+                    out.println("perf=" + g.skillsPanel1.jRadioButton19.isSelected()+"="+g.skillsPanel1.forms[12].form);
+                    out.println("persu=" + g.skillsPanel1.jRadioButton20.isSelected()+"="+g.skillsPanel1.forms[13].form);
+                    out.println("relig=" + g.skillsPanel1.jRadioButton21.isSelected()+"="+g.skillsPanel1.forms[14].form);
+                    out.println("SoH=" + g.skillsPanel1.jRadioButton22.isSelected()+"="+g.skillsPanel1.forms[15].form);
+                    out.println("stealth=" + g.skillsPanel1.jRadioButton23.isSelected()+"="+g.skillsPanel1.forms[16].form);
+                    out.println("survi=" + g.skillsPanel1.jRadioButton24.isSelected()+"="+g.skillsPanel1.forms[17].form);
 
                     out.println("raceclass=" + g.namePanel1.raceClass.getText());
                     out.println("xp=" + g.namePanel1.xpScore.getText());
