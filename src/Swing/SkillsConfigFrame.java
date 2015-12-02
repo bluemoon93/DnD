@@ -6,6 +6,10 @@
 package Swing;
 
 import Utils.Formula;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 
 /**
  *
@@ -16,8 +20,28 @@ public class SkillsConfigFrame extends javax.swing.JFrame {
     /**
      * Creates new form SkillsConfigFrame
      */
-    public SkillsConfigFrame(Formula [] forms, int str, int dex, int con, int intl, int wis, int cha, int prof) {
+    public SkillsConfigFrame(Formula[] forms, int str, int dex, int con, int intl, int wis, int cha, int prof) {
         initComponents();
+
+        jTextField1.getDocument().addDocumentListener(new skillListener(jTextField1, acrobaticsCheckMod, str, dex, con, intl, wis, cha, prof));
+        jTextField2.getDocument().addDocumentListener(new skillListener(jTextField2, animalCheckMod, str, dex, con, intl, wis, cha, prof));
+        jTextField3.getDocument().addDocumentListener(new skillListener(jTextField3, arcanaCheckMod, str, dex, con, intl, wis, cha, prof));
+        jTextField4.getDocument().addDocumentListener(new skillListener(jTextField4, athleticsCheckMod, str, dex, con, intl, wis, cha, prof));
+        jTextField5.getDocument().addDocumentListener(new skillListener(jTextField5, deceptionCheckMod, str, dex, con, intl, wis, cha, prof));
+        jTextField6.getDocument().addDocumentListener(new skillListener(jTextField6, historyCheckMod, str, dex, con, intl, wis, cha, prof));
+        jTextField7.getDocument().addDocumentListener(new skillListener(jTextField7, insightCheckMod, str, dex, con, intl, wis, cha, prof));
+        jTextField8.getDocument().addDocumentListener(new skillListener(jTextField8, intimidationCheckMod, str, dex, con, intl, wis, cha, prof));
+        jTextField9.getDocument().addDocumentListener(new skillListener(jTextField9, investigationCheckMod, str, dex, con, intl, wis, cha, prof));
+        jTextField10.getDocument().addDocumentListener(new skillListener(jTextField10, medicineCheckMod, str, dex, con, intl, wis, cha, prof));
+        jTextField11.getDocument().addDocumentListener(new skillListener(jTextField11, natureCheckMod, str, dex, con, intl, wis, cha, prof));
+        jTextField12.getDocument().addDocumentListener(new skillListener(jTextField12, perceptionCheckMod, str, dex, con, intl, wis, cha, prof));
+        jTextField13.getDocument().addDocumentListener(new skillListener(jTextField13, performanceCheckMod, str, dex, con, intl, wis, cha, prof));
+        jTextField14.getDocument().addDocumentListener(new skillListener(jTextField14, persuasionCheckMod, str, dex, con, intl, wis, cha, prof));
+        jTextField15.getDocument().addDocumentListener(new skillListener(jTextField15, religionCheckMod, str, dex, con, intl, wis, cha, prof));
+        jTextField16.getDocument().addDocumentListener(new skillListener(jTextField16, sleightHandCheckMod, str, dex, con, intl, wis, cha, prof));
+        jTextField17.getDocument().addDocumentListener(new skillListener(jTextField17, stealthCheckMod, str, dex, con, intl, wis, cha, prof));
+        jTextField18.getDocument().addDocumentListener(new skillListener(jTextField18, survivalCheckMod, str, dex, con, intl, wis, cha, prof));
+
         
         jTextField1.setText(forms[0].form);
         jTextField2.setText(forms[1].form);
@@ -37,7 +61,45 @@ public class SkillsConfigFrame extends javax.swing.JFrame {
         jTextField16.setText(forms[15].form);
         jTextField17.setText(forms[16].form);
         jTextField18.setText(forms[17].form);
-        
+
+    }
+
+    public class skillListener implements DocumentListener {
+
+        JTextField t;
+        JLabel l;
+        int str, dex, con, intl, wis, cha, prof;
+
+        public skillListener(JTextField t, JLabel l, int str, int dex, int con, int intl, int wis, int cha, int prof) {
+            this.t=t;
+            this.l=l;
+            this.str=str;
+            this.dex=dex;
+            this.con=con;
+            this.intl=intl;
+            this.wis=wis;
+            this.cha=cha;
+            this.prof=prof;
+        }
+
+        @Override
+        public void insertUpdate(DocumentEvent de) {
+            update();
+        }
+
+        @Override
+        public void removeUpdate(DocumentEvent de) {
+            update();
+        }
+
+        @Override
+        public void changedUpdate(DocumentEvent de) {
+            //
+        }
+
+        private void update() {
+            l.setText(""+new Formula(t.getText()).getValue(str, dex, con, intl, wis, cha, prof));
+        }
     }
 
     /**

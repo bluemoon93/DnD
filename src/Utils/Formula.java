@@ -19,10 +19,9 @@ public class Formula {
     // +-/* = regular math
     /*public static void main(String[] args) {
 
-        System.out.println(new Formula("   mi2dfg5+mi1*\\«10n(5+DEX) ").form);
-        System.out.println(new Formula("   mi2dfg5+mi1*\\«10n(5+DEX) ").getValue(0, 0, 0, 0, 0, 0, 0));
-    }*/
-
+     System.out.println(new Formula("   mi2dfg5+mi1*\\«10n(5+DEX) ").form);
+     System.out.println(new Formula("   mi2dfg5+mi1*\\«10n(5+DEX) ").getValue(0, 0, 0, 0, 0, 0, 0));
+     }*/
     public String form;
 
     public Formula(String s) {
@@ -34,24 +33,25 @@ public class Formula {
         }
 
         /*if (!Character.isDigit(form.charAt(0))) {
-            form = "0" + form;
-        }*/
+         form = "0" + form;
+         }*/
         /*if (form.charAt(0) != '+' && form.charAt(0) != '-') {
          form = "+" + form;
          }*/
-
     }
 
     public int getValue(int str, int dex, int con, int intl, int wis, int cha, int prof) {
         return getValue(form.replaceAll("STR", str + "").replaceAll("DEX", dex + "").replaceAll("CON", con + "")
-                .replaceAll("INT", intl + "").replaceAll("WIS", wis + "").replaceAll("CHA", cha + "").replaceAll("PROF", prof + ""));
+                .replaceAll("INT", intl + "").replaceAll("WIS", wis + "").replaceAll("CHA", cha + "")
+                .replaceAll("PROF", prof + "").replaceAll("[^0-9+-/\\*dxn\\(\\)]|,", ""));
     }
 
     public int getValue(String f) {
         //System.out.println(f);
         int index = 0;
 
-        while (f.contains("(")) {
+        while (f.contains("(") && f.contains(")")) {
+
             // doesnt work for nested ()
             int tRes = getValue(f.substring(f.indexOf("(") + 1, f.indexOf(")")));
 
@@ -61,7 +61,7 @@ public class Formula {
         //System.out.println(f);
         //int startIndex=0;
         if (f.contains("+") || f.contains("-")) {
-            index = getSmallestIndex(f, '+','-');
+            index = getSmallestIndex(f, '+', '-');
 
             if (f.charAt(index) == '+') {
                 return getValue(f.substring(0, index)) + getValue(f.substring(index + 1));
@@ -69,19 +69,24 @@ public class Formula {
                 return getValue(f.substring(0, index)) - getValue(f.substring(index + 1));
             }
         }
-      //  System.out.println(f);
+        //  System.out.println(f);
         if (f.contains("/") || f.contains("*")) {
-            index = getSmallestIndex(f, '*','/');
-            
+            index = getSmallestIndex(f, '*', '/');
+
             if (f.charAt(index) == '*') {
                 return getValue(f.substring(0, index)) * getValue(f.substring(index + 1));
             } else {
-                return getValue(f.substring(0, index)) / getValue(f.substring(index + 1));
+                int divisor = getValue(f.substring(index + 1));
+                if (divisor != 0) {
+                    return getValue(f.substring(0, index)) / divisor;
+                } else {
+                    return 0;
+                }
             }
         }
 
-        if (f.contains("d")||f.contains("n")||f.contains("x")) {
-            index = getSmallestIndex(f, 'd','n','x');
+        if (f.contains("d") || f.contains("n") || f.contains("x")) {
+            index = getSmallestIndex(f, 'd', 'n', 'x');
             if (f.charAt(index) == 'd') {
                 return getDice(getValue(f.substring(0, index)), getValue(f.substring(index + 1)));
             } else if (f.charAt(index) == 'n') {
@@ -101,26 +106,26 @@ public class Formula {
     public static int getSmallestIndex(String f, char c1, char c2) {
         int index = f.indexOf(c1);
         int index2 = f.indexOf(c2);
-        if (index == -1){
-            index=index2;
-        }else if(index2 != -1) {
+        if (index == -1) {
+            index = index2;
+        } else if (index2 != -1) {
             index = Math.min(index, index2);
         }
         return index;
     }
-    
+
     public static int getSmallestIndex(String f, char c1, char c2, char c3) {
         int index = f.indexOf(c1);
         int index2 = f.indexOf(c2);
-        if (index == -1){
-            index=index2;
-        }else if(index2 != -1) {
+        if (index == -1) {
+            index = index2;
+        } else if (index2 != -1) {
             index = Math.min(index, index2);
         }
         index2 = f.indexOf(c3);
-        if (index == -1){
-            index=index2;
-        }else if(index2 != -1) {
+        if (index == -1) {
+            index = index2;
+        } else if (index2 != -1) {
             index = Math.min(index, index2);
         }
         return index;
@@ -128,6 +133,8 @@ public class Formula {
 
     public static int getDice(int howMany, int diceSize) {
         int val = 0;
+        if(diceSize==0) return 0;
+        
         Random rand = new Random(System.currentTimeMillis());
         for (int i = 1; i <= howMany; i++) {
             val += (Math.abs(rand.nextInt()) % diceSize + 1);
