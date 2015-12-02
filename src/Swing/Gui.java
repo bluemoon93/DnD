@@ -56,7 +56,7 @@ public class Gui extends javax.swing.JFrame {
         namePanel1 = new Swing.NamePanel();
         textPanel1 = new Swing.TextPanel();
         spellStats1 = new Swing.SpellStats();
-        attackGroupPane1 = new Swing.AttackGroupPane();
+        attackGroupPane1 = new Swing.AttackGroupPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -319,7 +319,7 @@ public class Gui extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public Swing.ACPanel aCPanel1;
-    private Swing.AttackGroupPane attackGroupPane1;
+    public Swing.AttackGroupPanel attackGroupPane1;
     public Swing.AttributesPanel attributesPanel1;
     private Swing.DicePanel dicePanel;
     public Swing.HPPanel hPPanel1;

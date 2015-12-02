@@ -12,16 +12,18 @@ import javax.swing.JButton;
  *
  * @author BlueMoon
  */
-public class AttackGroupPane extends javax.swing.JPanel {
-    ArrayList<AttackPanel> l;
+public class AttackGroupPanel extends javax.swing.JPanel {
+
+    public ArrayList<AttackPanel> l;
     Gui g;
+
     /**
      * Creates new form AttackGroupPane
      */
-    public AttackGroupPane() {
+    public AttackGroupPanel() {
         initComponents();
-        l=new ArrayList();
-        
+        l = new ArrayList();
+
         JButton addButton = new JButton();
         addButton.setText("Add new attack");
         addButton.addActionListener(new java.awt.event.ActionListener() {
@@ -30,24 +32,49 @@ public class AttackGroupPane extends javax.swing.JPanel {
             }
         });
         jPanel1.add(addButton);
-        
-        
+    }
 
-    }
-    
-    public void setListeners(Gui g){
-        this.g=g;
-        
+    public void setListeners(Gui g) {
+        this.g = g;
+
         addNewAP();
         addNewAP();
         addNewAP();
     }
-    
-    public final synchronized void addNewAP(){
+
+    public synchronized void clearAPs() {
+        for (; l.size() > 0;) {
+            l.remove(0);
+            jPanel1.remove(0);
+        }
+
+        this.revalidate();
+        this.repaint();
+    }
+
+    public synchronized void addNewAP(AttackPanel ap) {
+        ap.setListeners(g);
+        jPanel1.add(ap, l.size());
+        l.add(ap);
+
+        this.revalidate();
+        this.repaint();
+    }
+
+    public final synchronized void addNewAP() {
         AttackPanel ap = new AttackPanel();
         ap.setListeners(g);
         jPanel1.add(ap, l.size());
         l.add(ap);
+
+        this.revalidate();
+        this.repaint();
+    }
+
+    public final synchronized void removeAP(AttackPanel ap) {
+        int index = l.indexOf(ap);
+        l.remove(index);
+        jPanel1.remove(index);
 
         this.revalidate();
         this.repaint();

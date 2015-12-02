@@ -87,30 +87,39 @@ public class SpellStats extends javax.swing.JPanel {
 
         jLabel2.setText("Atk Bonus: 2");
 
+        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField1.setText("0/0");
         jTextField1.setToolTipText("Level 1 Slots");
 
+        jTextField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField2.setText("0/0");
         jTextField2.setToolTipText("Level 2 Slots");
 
+        jTextField3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField3.setText("0/0");
         jTextField3.setToolTipText("Level 3 Slots");
 
+        jTextField4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField4.setText("0/0");
         jTextField4.setToolTipText("Level 4 Slots");
 
+        jTextField5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField5.setText("0/0");
         jTextField5.setToolTipText("Level 5 Slots");
 
+        jTextField6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField6.setText("0/0");
         jTextField6.setToolTipText("Level 6 Slots");
 
+        jTextField7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField7.setText("0/0");
         jTextField7.setToolTipText("Level 7 Slots");
 
+        jTextField8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField8.setText("0/0");
         jTextField8.setToolTipText("Level 8 Slots");
 
+        jTextField9.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField9.setText("0/0");
         jTextField9.setToolTipText("Level 9 Slots");
 
