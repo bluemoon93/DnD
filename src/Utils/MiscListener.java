@@ -198,43 +198,14 @@ public class MiscListener implements DocumentListener {
         g.sTPanel1.stActionListener(g.sTPanel1.jRadioButton5, g.sTPanel1.wisST, "WIS");
         g.sTPanel1.stActionListener(g.sTPanel1.jRadioButton6, g.sTPanel1.chaST, "CHA");
 
-        //dex
         g.skillsPanel1.updateDexSkills();
-        //g.skillsPanel1.skillActionListener(g.skillsPanel1.jRadioButton11, g.skillsPanel1.acrobaticsCheckMod, "DEX");
-        //g.skillsPanel1.skillActionListener(g.skillsPanel1.jRadioButton22, g.skillsPanel1.sleightHandCheckMod, "DEX");
-        //g.skillsPanel1.skillActionListener(g.skillsPanel1.jRadioButton23, g.skillsPanel1.stealthCheckMod, "DEX");
-
-        //wis
         g.skillsPanel1.updateWisSkills();
-        /*g.skillsPanel1.skillActionListener(g.skillsPanel1.jRadioButton25, g.skillsPanel1.animalCheckMod, "WIS");
-        g.skillsPanel1.skillActionListener(g.skillsPanel1.jRadioButton15, g.skillsPanel1.insightCheckMod, "WIS");
-        g.skillsPanel1.skillActionListener(g.skillsPanel1.jRadioButton17, g.skillsPanel1.medicineCheckMod, "WIS");
-        g.skillsPanel1.skillActionListener(g.skillsPanel1.jRadioButton18, g.skillsPanel1.perceptionCheckMod, "WIS");
-        g.skillsPanel1.skillActionListener(g.skillsPanel1.jRadioButton24, g.skillsPanel1.survivalCheckMod, "WIS");
-                */
-        //int
         g.skillsPanel1.updateIntSkills();
-        /*g.skillsPanel1.skillActionListener(g.skillsPanel1.jRadioButton21, g.skillsPanel1.religionCheckMod, "INT");
-        g.skillsPanel1.skillActionListener(g.skillsPanel1.jRadioButton10, g.skillsPanel1.arcanaCheckMod, "INT");
-        g.skillsPanel1.skillActionListener(g.skillsPanel1.jRadioButton14, g.skillsPanel1.historyCheckMod, "INT");
-        g.skillsPanel1.skillActionListener(g.skillsPanel1.jRadioButton16, g.skillsPanel1.investigationCheckMod, "INT");
-        g.skillsPanel1.skillActionListener(g.skillsPanel1.jRadioButton9, g.skillsPanel1.natureCheckMod, "INT");
-*/
-        //str
         g.skillsPanel1.updateStrSkills();
-        //g.skillsPanel1.skillActionListener(g.skillsPanel1.jRadioButton8, g.skillsPanel1.athleticsCheckMod, "STR");
-
-        //cha
         g.skillsPanel1.updateChaSkills();
-        /*g.skillsPanel1.skillActionListener(g.skillsPanel1.jRadioButton12, g.skillsPanel1.deceptionCheckMod, "CHA");
-        g.skillsPanel1.skillActionListener(g.skillsPanel1.jRadioButton13, g.skillsPanel1.intimidationCheckMod, "CHA");
-        g.skillsPanel1.skillActionListener(g.skillsPanel1.jRadioButton19, g.skillsPanel1.performanceCheckMod, "CHA");
-        g.skillsPanel1.skillActionListener(g.skillsPanel1.jRadioButton20, g.skillsPanel1.persuasionCheckMod, "CHA");
-*/
+        
         g.updatePassiveWisdom();
         g.hPPanel1.hitDiceML.update();
         g.spellStats1.updateSpellVars();
-        //g.hitDiceNumberActionPerformed(null);
-
     }
 }

@@ -66,7 +66,7 @@ public class TextPanel extends javax.swing.JPanel {
         jScrollPane6.setBackground(new java.awt.Color(255, 255, 255));
 
         profsLanguages.setColumns(20);
-        profsLanguages.setRows(4);
+        profsLanguages.setRows(3);
         profsLanguages.setText("Proficiencies & Languages");
         jScrollPane6.setViewportView(profsLanguages);
 

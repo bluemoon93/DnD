@@ -62,7 +62,7 @@ public class FileIO {
             g.namePanel1.charName.setText(" ");
         }
 
-        if (g.jTextField7.getText().equals("")) {
+        /*if (g.jTextField7.getText().equals("")) {
             g.jTextField7.setText(" ");
         }
         if (g.jTextField9.getText().equals("")) {
@@ -112,7 +112,7 @@ public class FileIO {
         }
         if (g.jTextField29.getText().equals("")) {
             g.jTextField29.setText(" ");
-        }
+        }*/
     }
     
     public static void loadFile(Gui g){
@@ -252,7 +252,7 @@ public class FileIO {
                 //jTextField14ActionPerformed(null);
                 //jTextField15ActionPerformed(null);
 
-                g.jTextField7.setText(fin.nextLine().split("=")[1]);
+               /* g.jTextField7.setText(fin.nextLine().split("=")[1]);
                 g.jTextField9.setText(fin.nextLine().split("=")[1]);
                 g.jTextField11.setText(fin.nextLine().split("=")[1]);
                 g.jTextField17.setText(fin.nextLine().split("=")[1]);
@@ -279,7 +279,7 @@ public class FileIO {
                 g.jTextField29.setText(fin.nextLine().split("=")[1]);
                 g.jCheckBox10.setText(fin.nextLine().split("=")[1]);
                 g.jCheckBox11.setSelected(Boolean.parseBoolean(fin.nextLine().split("=")[1]));
-
+*/
                 String person = "";
                 String temp = fin.nextLine().split("=")[1].substring(1);
                 while (!temp.contains(">")) {
@@ -393,7 +393,7 @@ public class FileIO {
                     out.println("align=" + g.namePanel1.alignment.getText());
                     out.println("name=" + g.namePanel1.charName.getText());
 
-                    out.println("wep1name=" + g.jTextField7.getText());
+                   /* out.println("wep1name=" + g.jTextField7.getText());
                     out.println("wep1Amod=" + g.jTextField9.getText());
                     out.println("wep1dmg=" + g.jTextField11.getText());
                     out.println("wep1Dtype=" + g.jTextField17.getText());
@@ -420,7 +420,7 @@ public class FileIO {
                     out.println("wep4Dtype=" + g.jTextField29.getText());
                     out.println("wep4Wtype=" + g.jCheckBox10.getText());
                     out.println("wep4prof=" + g.jCheckBox11.isSelected());
-
+*/
                     out.println("person=<" + g.textPanel1.personality.getText().replaceAll("<", "").replaceAll(">", "") + ">");
                     out.println("ideals=<" + g.textPanel1.idealsBonds.getText().replaceAll("<", "").replaceAll(">", "") + ">");
                     out.println("flaws=<" + g.textPanel1.flaws.getText().replaceAll("<", "").replaceAll(">", "") + ">");

@@ -152,7 +152,7 @@
         <Component class="javax.swing.JTextArea" name="profsLanguages">
           <Properties>
             <Property name="columns" type="int" value="20"/>
-            <Property name="rows" type="int" value="4"/>
+            <Property name="rows" type="int" value="3"/>
             <Property name="text" type="java.lang.String" value="Proficiencies &amp; Languages"/>
           </Properties>
           <AuxValues>
