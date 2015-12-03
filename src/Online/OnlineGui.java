@@ -11,8 +11,6 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -26,10 +24,11 @@ public class OnlineGui extends javax.swing.JFrame {
 
     public OnlineGui(String name, Socket sock) {
         initComponents();
+        paintingPanel1.setParent(this);
         try {
             pw = new PrintWriter(sock.getOutputStream());
             BufferedReader in = new BufferedReader(new InputStreamReader(sock.getInputStream()));
-            GetThread thr = new GetThread(in, jTextArea1);
+            GetThread thr = new GetThread(in, jTextArea1, paintingPanel1);
             thr.start();
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -39,13 +38,32 @@ public class OnlineGui extends javax.swing.JFrame {
 
     public OnlineGui(ServerSocket sock) {
         initComponents();
+        paintingPanel1.setParent(this);
         name="DM";
         jTextArea1.setText("Open at port " + sock.getLocalPort());
-        aThr = new AcceptThread(sock, jTextArea1);
+        aThr = new AcceptThread(sock, jTextArea1, paintingPanel1);
         aThr.start();
         // new thread to forward things
     }
 
+    public void command(String text){
+        if (pw != null) {
+            pw.println(text);
+            pw.flush();
+        } else {
+            commandForAll(text);
+        }
+    }
+    
+    public void commandForAll(String text){
+        synchronized (aThr.out) {
+            for (PrintWriter pw : aThr.out) {
+                pw.println(text);
+                pw.flush();
+            }
+        }
+    }
+    
     public void print(String text) {
         //jTextArea1.setText(jTextArea1.getText()+"\n"+text);
         //System.out.println(n + text);
@@ -69,7 +87,7 @@ public class OnlineGui extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jTextField1 = new javax.swing.JTextField();
-        jPanel1 = new javax.swing.JPanel();
+        paintingPanel1 = new Swing.PaintingPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -84,19 +102,6 @@ public class OnlineGui extends javax.swing.JFrame {
             }
         });
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1056, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 463, Short.MAX_VALUE)
-        );
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -104,7 +109,7 @@ public class OnlineGui extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(paintingPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1056, Short.MAX_VALUE)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING))
                 .addContainerGap())
@@ -113,7 +118,7 @@ public class OnlineGui extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(paintingPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 473, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -140,9 +145,9 @@ public class OnlineGui extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;
+    private Swing.PaintingPanel paintingPanel1;
     // End of variables declaration//GEN-END:variables
 }

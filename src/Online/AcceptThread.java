@@ -5,30 +5,31 @@
  */
 package Online;
 
+import Swing.PaintingPanel;
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JTextArea;
 
 /**
  *
  * @author BlueMoon
  */
+// This accepts new connections and creates a thread to handle clients
 public class AcceptThread extends Thread{
     ServerSocket a;
     ArrayList<PrintWriter> out;
     JTextArea jt;
+    PaintingPanel pp;
     
-    public AcceptThread(ServerSocket a, JTextArea jt){
+    public AcceptThread(ServerSocket a, JTextArea jt, PaintingPanel pp){
         this.a=a;
         out=new ArrayList();
         this.jt=jt;
+        this.pp=pp;
     }
     
     @Override
@@ -41,7 +42,7 @@ public class AcceptThread extends Thread{
                 synchronized(out){
                     out.add(new PrintWriter(s.getOutputStream()));
                 }
-                ForwardThread thr = new ForwardThread(in, out, jt);
+                ForwardThread thr = new ForwardThread(in, out, jt, pp);
                 thr.start();
             } catch (Exception ex) {
                 ex.printStackTrace();
