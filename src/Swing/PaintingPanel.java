@@ -185,7 +185,8 @@ public final class PaintingPanel extends javax.swing.JPanel {
         g.dispose();
         imageLabel.repaint();
 
-        reportPositionAndColor(null, color, null);
+        if(bi==canvasImage)
+            reportPositionAndColor(null, color, null);
     }
     
     public void clear(Color c) {

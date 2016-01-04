@@ -199,7 +199,7 @@ public class AttackPanel extends javax.swing.JPanel {
         int finalValue = mod + Formula.getDice(1, 20);
         jLabel56.setText(String.format("%2d", finalValue));
         if (g.online != null) {
-            g.online.print(" rolled ATTACK on " + jTextField7.getText() + " - " + finalValue + "("+mod+")");
+            g.online.print(" rolled ATTACK on " + jTextField7.getText() + " - " + finalValue + " ("+mod+")");
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -215,7 +215,7 @@ public class AttackPanel extends javax.swing.JPanel {
         jLabel56.setText(String.format("%2d", finalValue));
         
         if (g.online != null) {
-            g.online.print(" rolled DAMAGE on " + jTextField7.getText() + " - " + finalValue + "("+mod+")");
+            g.online.print(" rolled DAMAGE on " + jTextField7.getText() + " - " + finalValue + " ("+mod+")");
         }
     }//GEN-LAST:event_jButton4ActionPerformed
 

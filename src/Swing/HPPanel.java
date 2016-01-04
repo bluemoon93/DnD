@@ -226,6 +226,7 @@ public class HPPanel extends javax.swing.JPanel {
         }
         jLabel60.setText(currentDice + " Hit Dice Left");
         jButton12.setEnabled(true);
+        currHpScore.setText(jLabel61.getText().split(" ")[1]);
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
